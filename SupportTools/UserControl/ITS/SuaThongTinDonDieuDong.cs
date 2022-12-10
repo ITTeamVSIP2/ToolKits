@@ -118,6 +118,36 @@ namespace SupportTools
             }
         }
 
+        private void dgvIEAbnormalTime_EditFormPrepared(object sender, EditFormPreparedEventArgs e)
+        {
+            Control ctrl = MyExtenstions.FindControl(e.Panel, "Update");
+            if (ctrl != null)
+            {
+                ctrl.Text = "Cập nhật";
+            }
+
+            ctrl = MyExtenstions.FindControl(e.Panel, "Cancel");
+            if (ctrl != null)
+            {
+                ctrl.Text = "Hủy";
+            }
+        }
+        public static class MyExtenstions
+        {
+
+            public static Control FindControl( Control root, string text)
+            {
+                if (root == null) throw new ArgumentNullException("root");
+                foreach (Control child in root.Controls)
+                {
+                    if (child.Text == text) return child;
+                    Control found = FindControl(child, text);
+                    if (found != null) return found;
+                }
+                return null;
+            }
+        }
+
         private void btnHienThiAll_Click(object sender, EventArgs e)
         {
             string Sql;

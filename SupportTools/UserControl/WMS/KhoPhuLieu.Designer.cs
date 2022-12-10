@@ -30,8 +30,8 @@ namespace SupportTools
         private void InitializeComponent()
         {
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlDataERP2 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlDataStaging2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlDataWMS2 = new DevExpress.XtraGrid.GridControl();
@@ -44,12 +44,11 @@ namespace SupportTools
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlDataWMS = new DevExpress.XtraGrid.GridControl();
             this.gridViewDataWMS = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDaySync2 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlDataStaging = new DevExpress.XtraGrid.GridControl();
             this.gridViewDataStaging = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtCodeee = new DevExpress.XtraEditors.TextEdit();
-            this.btnUpdate2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlDataERP = new DevExpress.XtraGrid.GridControl();
             this.gridViewDataERP = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -65,8 +64,8 @@ namespace SupportTools
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlDataERP2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlDataStaging2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
@@ -78,7 +77,7 @@ namespace SupportTools
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDataWMS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDataWMS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDaySync2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDataStaging)).BeginInit();
@@ -101,39 +100,39 @@ namespace SupportTools
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gridControlDataERP2;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridControl1
+            // gridControlDataERP2
             // 
-            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridControlDataERP2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl1.Location = new System.Drawing.Point(5, 24);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(754, 97);
-            this.gridControl1.TabIndex = 20;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControlDataERP2.Location = new System.Drawing.Point(5, 24);
+            this.gridControlDataERP2.MainView = this.gridView1;
+            this.gridControlDataERP2.Name = "gridControlDataERP2";
+            this.gridControlDataERP2.Size = new System.Drawing.Size(754, 176);
+            this.gridControlDataERP2.TabIndex = 20;
+            this.gridControlDataERP2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // gridControl2
+            // gridControlDataStaging2
             // 
-            this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridControlDataStaging2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl2.Location = new System.Drawing.Point(5, 24);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(754, 125);
-            this.gridControl2.TabIndex = 21;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControlDataStaging2.Location = new System.Drawing.Point(5, 24);
+            this.gridControlDataStaging2.MainView = this.gridView2;
+            this.gridControlDataStaging2.Name = "gridControlDataStaging2";
+            this.gridControlDataStaging2.Size = new System.Drawing.Size(754, 176);
+            this.gridControlDataStaging2.TabIndex = 21;
+            this.gridControlDataStaging2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.GridControl = this.gridControlDataStaging2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
@@ -145,7 +144,7 @@ namespace SupportTools
             this.groupControl6.Controls.Add(this.gridControlDataWMS2);
             this.groupControl6.Location = new System.Drawing.Point(6, 77);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(764, 154);
+            this.groupControl6.Size = new System.Drawing.Size(764, 205);
             this.groupControl6.TabIndex = 40;
             this.groupControl6.Text = "Dữ liệu WMS";
             // 
@@ -156,7 +155,7 @@ namespace SupportTools
             this.gridControlDataWMS2.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataWMS2.MainView = this.gridViewDataWMS2;
             this.gridControlDataWMS2.Name = "gridControlDataWMS2";
-            this.gridControlDataWMS2.Size = new System.Drawing.Size(754, 125);
+            this.gridControlDataWMS2.Size = new System.Drawing.Size(754, 176);
             this.gridControlDataWMS2.TabIndex = 22;
             this.gridControlDataWMS2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataWMS2});
@@ -171,7 +170,7 @@ namespace SupportTools
             // 
             // txtDaySync
             // 
-            this.txtDaySync.Location = new System.Drawing.Point(533, 16);
+            this.txtDaySync.Location = new System.Drawing.Point(514, 16);
             this.txtDaySync.Name = "txtDaySync";
             this.txtDaySync.Size = new System.Drawing.Size(35, 20);
             this.txtDaySync.TabIndex = 29;
@@ -181,12 +180,12 @@ namespace SupportTools
             this.txtOrderCode.EditValue = "";
             this.txtOrderCode.Location = new System.Drawing.Point(58, 16);
             this.txtOrderCode.Name = "txtOrderCode";
-            this.txtOrderCode.Size = new System.Drawing.Size(207, 20);
+            this.txtOrderCode.Size = new System.Drawing.Size(188, 20);
             this.txtOrderCode.TabIndex = 28;
             // 
             // btnUpdate1
             // 
-            this.btnUpdate1.Location = new System.Drawing.Point(387, 15);
+            this.btnUpdate1.Location = new System.Drawing.Point(368, 15);
             this.btnUpdate1.Name = "btnUpdate1";
             this.btnUpdate1.Size = new System.Drawing.Size(140, 40);
             this.btnUpdate1.TabIndex = 27;
@@ -203,7 +202,7 @@ namespace SupportTools
             // 
             // btnSync
             // 
-            this.btnSync.Location = new System.Drawing.Point(574, 15);
+            this.btnSync.Location = new System.Drawing.Point(555, 15);
             this.btnSync.Name = "btnSync";
             this.btnSync.Size = new System.Drawing.Size(100, 40);
             this.btnSync.TabIndex = 26;
@@ -217,7 +216,7 @@ namespace SupportTools
             this.groupControl1.Controls.Add(this.gridControlDataWMS);
             this.groupControl1.Location = new System.Drawing.Point(6, 77);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(764, 154);
+            this.groupControl1.Size = new System.Drawing.Size(764, 205);
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "Dữ liệu WMS";
             // 
@@ -228,7 +227,7 @@ namespace SupportTools
             this.gridControlDataWMS.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataWMS.MainView = this.gridViewDataWMS;
             this.gridControlDataWMS.Name = "gridControlDataWMS";
-            this.gridControlDataWMS.Size = new System.Drawing.Size(754, 125);
+            this.gridControlDataWMS.Size = new System.Drawing.Size(754, 176);
             this.gridControlDataWMS.TabIndex = 22;
             this.gridControlDataWMS.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataWMS});
@@ -240,21 +239,21 @@ namespace SupportTools
             this.gridViewDataWMS.OptionsBehavior.Editable = false;
             this.gridViewDataWMS.OptionsView.ShowGroupPanel = false;
             // 
-            // textEdit1
+            // txtDaySync2
             // 
-            this.textEdit1.Location = new System.Drawing.Point(483, 16);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(35, 20);
-            this.textEdit1.TabIndex = 38;
+            this.txtDaySync2.Location = new System.Drawing.Point(523, 16);
+            this.txtDaySync2.Name = "txtDaySync2";
+            this.txtDaySync2.Size = new System.Drawing.Size(35, 20);
+            this.txtDaySync2.TabIndex = 38;
             // 
             // groupControl2
             // 
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.gridControlDataStaging);
-            this.groupControl2.Location = new System.Drawing.Point(6, 237);
+            this.groupControl2.Location = new System.Drawing.Point(6, 288);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(764, 154);
+            this.groupControl2.Size = new System.Drawing.Size(764, 205);
             this.groupControl2.TabIndex = 32;
             this.groupControl2.Text = "Dữ liệu Staging";
             // 
@@ -265,7 +264,7 @@ namespace SupportTools
             this.gridControlDataStaging.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataStaging.MainView = this.gridViewDataStaging;
             this.gridControlDataStaging.Name = "gridControlDataStaging";
-            this.gridControlDataStaging.Size = new System.Drawing.Size(754, 125);
+            this.gridControlDataStaging.Size = new System.Drawing.Size(754, 176);
             this.gridControlDataStaging.TabIndex = 21;
             this.gridControlDataStaging.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataStaging});
@@ -279,20 +278,11 @@ namespace SupportTools
             // 
             // txtCodeee
             // 
-            this.txtCodeee.EditValue = "PSCLI22A0159Z";
+            this.txtCodeee.EditValue = "";
             this.txtCodeee.Location = new System.Drawing.Point(67, 16);
             this.txtCodeee.Name = "txtCodeee";
             this.txtCodeee.Size = new System.Drawing.Size(188, 20);
             this.txtCodeee.TabIndex = 37;
-            // 
-            // btnUpdate2
-            // 
-            this.btnUpdate2.Location = new System.Drawing.Point(377, 15);
-            this.btnUpdate2.Name = "btnUpdate2";
-            this.btnUpdate2.Size = new System.Drawing.Size(100, 40);
-            this.btnUpdate2.TabIndex = 36;
-            this.btnUpdate2.Text = "Cập nhật";
-            this.btnUpdate2.Click += new System.EventHandler(this.btnUpdate2_Click);
             // 
             // groupControl3
             // 
@@ -300,9 +290,9 @@ namespace SupportTools
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl3.Controls.Add(this.gridControlDataERP);
-            this.groupControl3.Location = new System.Drawing.Point(6, 397);
+            this.groupControl3.Location = new System.Drawing.Point(6, 499);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(764, 126);
+            this.groupControl3.Size = new System.Drawing.Size(764, 205);
             this.groupControl3.TabIndex = 32;
             this.groupControl3.Text = "Dữ liệu ERP";
             // 
@@ -314,7 +304,7 @@ namespace SupportTools
             this.gridControlDataERP.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataERP.MainView = this.gridViewDataERP;
             this.gridControlDataERP.Name = "gridControlDataERP";
-            this.gridControlDataERP.Size = new System.Drawing.Size(754, 97);
+            this.gridControlDataERP.Size = new System.Drawing.Size(754, 176);
             this.gridControlDataERP.TabIndex = 20;
             this.gridControlDataERP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataERP});
@@ -330,10 +320,10 @@ namespace SupportTools
             // 
             this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl5.Controls.Add(this.gridControl2);
-            this.groupControl5.Location = new System.Drawing.Point(6, 237);
+            this.groupControl5.Controls.Add(this.gridControlDataStaging2);
+            this.groupControl5.Location = new System.Drawing.Point(6, 288);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(764, 154);
+            this.groupControl5.Size = new System.Drawing.Size(764, 205);
             this.groupControl5.TabIndex = 42;
             this.groupControl5.Text = "Dữ liệu Staging";
             // 
@@ -356,7 +346,7 @@ namespace SupportTools
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(281, 15);
+            this.btnCheck.Location = new System.Drawing.Point(262, 15);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(100, 40);
             this.btnCheck.TabIndex = 25;
@@ -365,7 +355,7 @@ namespace SupportTools
             // 
             // btnUpdateFEPO2
             // 
-            this.btnUpdateFEPO2.Location = new System.Drawing.Point(630, 15);
+            this.btnUpdateFEPO2.Location = new System.Drawing.Point(377, 15);
             this.btnUpdateFEPO2.Name = "btnUpdateFEPO2";
             this.btnUpdateFEPO2.Size = new System.Drawing.Size(140, 40);
             this.btnUpdateFEPO2.TabIndex = 43;
@@ -377,10 +367,10 @@ namespace SupportTools
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl4.Controls.Add(this.gridControl1);
-            this.groupControl4.Location = new System.Drawing.Point(6, 397);
+            this.groupControl4.Controls.Add(this.gridControlDataERP2);
+            this.groupControl4.Location = new System.Drawing.Point(6, 499);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(764, 126);
+            this.groupControl4.Size = new System.Drawing.Size(764, 205);
             this.groupControl4.TabIndex = 41;
             this.groupControl4.Text = "Dữ liệu ERP";
             // 
@@ -391,22 +381,21 @@ namespace SupportTools
             this.tabPage2.Controls.Add(this.groupControl4);
             this.tabPage2.Controls.Add(this.groupControl5);
             this.tabPage2.Controls.Add(this.groupControl6);
-            this.tabPage2.Controls.Add(this.textEdit1);
+            this.tabPage2.Controls.Add(this.txtDaySync2);
             this.tabPage2.Controls.Add(this.txtCodeee);
-            this.tabPage2.Controls.Add(this.btnUpdate2);
             this.tabPage2.Controls.Add(this.labelControl4);
             this.tabPage2.Controls.Add(this.btnSync2);
             this.tabPage2.Controls.Add(this.btnCheck2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 529);
+            this.tabPage2.Size = new System.Drawing.Size(776, 710);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "In gộp";
             // 
             // btnSync2
             // 
-            this.btnSync2.Location = new System.Drawing.Point(524, 15);
+            this.btnSync2.Location = new System.Drawing.Point(564, 15);
             this.btnSync2.Name = "btnSync2";
             this.btnSync2.Size = new System.Drawing.Size(100, 40);
             this.btnSync2.TabIndex = 35;
@@ -423,7 +412,7 @@ namespace SupportTools
             this.tabControl1.Location = new System.Drawing.Point(13, 14);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(784, 555);
+            this.tabControl1.Size = new System.Drawing.Size(784, 736);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -441,7 +430,7 @@ namespace SupportTools
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(776, 529);
+            this.tabPage1.Size = new System.Drawing.Size(776, 710);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cài đặt xuất kho";
             // 
@@ -456,7 +445,7 @@ namespace SupportTools
             this.groupControl7.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl7.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl7.Name = "groupControl7";
-            this.groupControl7.Size = new System.Drawing.Size(810, 583);
+            this.groupControl7.Size = new System.Drawing.Size(810, 764);
             this.groupControl7.TabIndex = 2;
             this.groupControl7.Text = "groupControl7";
             // 
@@ -468,10 +457,10 @@ namespace SupportTools
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl7);
             this.Name = "KhoPhuLieu";
-            this.Size = new System.Drawing.Size(816, 589);
+            this.Size = new System.Drawing.Size(816, 770);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlDataERP2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlDataStaging2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
@@ -483,7 +472,7 @@ namespace SupportTools
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDataWMS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDataWMS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDaySync2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDataStaging)).EndInit();
@@ -511,8 +500,8 @@ namespace SupportTools
         #endregion
 
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.GridControl gridControlDataERP2;
+        private DevExpress.XtraGrid.GridControl gridControlDataStaging2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private DevExpress.XtraGrid.GridControl gridControlDataWMS2;
@@ -525,12 +514,11 @@ namespace SupportTools
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl gridControlDataWMS;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewDataWMS;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtDaySync2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridControlDataStaging;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewDataStaging;
         private DevExpress.XtraEditors.TextEdit txtCodeee;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl gridControlDataERP;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewDataERP;

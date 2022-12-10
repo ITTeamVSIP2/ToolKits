@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars.Docking2010.Views;
+using DevExpress.XtraBars.Localization;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,8 @@ namespace SupportTools
         string taotaikhoanAGP = "Tạo tài khoản AGP";
         public Main()
         {
+            // sửa text search menu
+            BarLocalizer.Active = new CustomBarLocalizer();
             InitializeComponent();
             _Control1 = OpenControl1(suadonkyduyet);
             _Control2 = OpenControl2(kiemtraluutrinh);
@@ -61,6 +64,22 @@ namespace SupportTools
             _Control19 = OpenControl19(suathongtindondieudong);
             _Control20 = OpenControl20(taotaikhoanAGP);
         }
+        // sửa text search menu
+        public class CustomBarLocalizer : BarLocalizer
+        {   string ret = "";
+            public override string GetLocalizedString(BarString id)
+            {
+                
+                switch (id)
+                {
+                    case BarString.AccordionControlSearchBoxPromptText: return "Nhập tên chức năng...";
+                    default:
+                        ret = base.GetLocalizedString(id);
+                        break;
+                }
+                return ret;
+            }
+        }//
         XtraUserControl OpenControl1(string text)
         {
             XtraUserControl result = new XtraUserControl();

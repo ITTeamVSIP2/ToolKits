@@ -141,7 +141,7 @@ namespace SupportTools
             this.gcLine.Location = new System.Drawing.Point(5, 24);
             this.gcLine.MainView = this.dgvLine;
             this.gcLine.Name = "gcLine";
-            this.gcLine.Size = new System.Drawing.Size(474, 316);
+            this.gcLine.Size = new System.Drawing.Size(468, 316);
             this.gcLine.TabIndex = 2;
             this.gcLine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvLine});
@@ -165,9 +165,9 @@ namespace SupportTools
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.gcLine);
-            this.groupControl2.Location = new System.Drawing.Point(17, 71);
+            this.groupControl2.Location = new System.Drawing.Point(23, 71);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(484, 345);
+            this.groupControl2.Size = new System.Drawing.Size(478, 345);
             this.groupControl2.TabIndex = 22;
             this.groupControl2.Text = "Danh sách line";
             // 
@@ -316,6 +316,7 @@ namespace SupportTools
             this.dgvIEAbnormalTime.Name = "dgvIEAbnormalTime";
             this.dgvIEAbnormalTime.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
             this.dgvIEAbnormalTime.OptionsView.ShowGroupPanel = false;
+            this.dgvIEAbnormalTime.EditFormPrepared += new DevExpress.XtraGrid.Views.Grid.EditFormPreparedEventHandler(this.dgvIEAbnormalTime_EditFormPrepared);
             this.dgvIEAbnormalTime.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.dgvIEAbnormalTime_RowUpdated);
             // 
             // gcIEAbnormalTime
@@ -342,7 +343,7 @@ namespace SupportTools
             this.gcIEAbnormalTime.Location = new System.Drawing.Point(5, 24);
             this.gcIEAbnormalTime.MainView = this.dgvIEAbnormalTime;
             this.gcIEAbnormalTime.Name = "gcIEAbnormalTime";
-            this.gcIEAbnormalTime.Size = new System.Drawing.Size(1108, 295);
+            this.gcIEAbnormalTime.Size = new System.Drawing.Size(1102, 295);
             this.gcIEAbnormalTime.TabIndex = 11;
             this.gcIEAbnormalTime.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvIEAbnormalTime});
@@ -379,9 +380,9 @@ namespace SupportTools
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl5.Controls.Add(this.gcIEAbnormalTime);
-            this.groupControl5.Location = new System.Drawing.Point(17, 493);
+            this.groupControl5.Location = new System.Drawing.Point(23, 493);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(1118, 324);
+            this.groupControl5.Size = new System.Drawing.Size(1112, 324);
             this.groupControl5.TabIndex = 25;
             this.groupControl5.Text = "Danh sách chi tiết đơn điều động";
             // 

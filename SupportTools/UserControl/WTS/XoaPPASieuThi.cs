@@ -57,6 +57,26 @@ namespace SupportTools
                 gridView1.Columns["tInTime"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
                 gridView1.Columns["tInTime"].DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
                 x = gridView1.RowCount;
+                if (x > 0)
+                {
+                    for (int i = 0; i < x; i++)
+                    {
+                        string VSIP2 = gridView1.GetRowCellValue(i, "sDeptNo").ToString();
+                        if (VSIP2 == "VSIP2SEW")
+                        {
+                            simpleButtonXoaPPA.Enabled = false;
+                            break;
+                        }
+                        else
+                        {
+                            simpleButtonXoaPPA.Enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+                    simpleButtonXoaPPA.Enabled = true;
+                }
             }
             catch// (Exception ex)
             {
@@ -102,14 +122,6 @@ namespace SupportTools
                 gridView1.Columns["dOutputDate"].DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
                 gridView1.Columns["tCreateTime"].DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
                 gridControl1.DataSource = dt;
-                if (x == 1)
-                {
-                    simpleButtonXoaPPA.Enabled = false;
-                }
-                if (x != 1)
-                {
-                    simpleButtonXoaPPA.Enabled = true;
-                }
             }
             catch //(Exception ex)
             {

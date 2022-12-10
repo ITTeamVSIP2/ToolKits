@@ -95,17 +95,98 @@ namespace SupportTools
                     JOIN FEWMS.dbo.AccessoryInputOrderMst mst (nolock) ON dtl.StockInOrderID = mst.StockInOrderID
                     WHERE  1= 1 and mst.OrderCode like '%" + txtCodeee.Text + "%'";
 
-            //SqlStaging = @"SELECT msuo.StockOutOrderID, msuo.OrderCode, msuo.Status, msuo.OrderDate --msooai.Quantity
-            //                FROM erpsvr.FEAStaging.dbo.MaterialStockOutOrder msuo (NOLOCK)
-            //                INNER JOIN erpsvr.FEAStaging.dbo.MaterialStockOutOrderAccessoryItem msooai(NOLOCK)
-            //                ON msooai.StockOutOrderID = msuo.StockOutOrderID
-            //                WHERE msuo.OrderCode = '" + txtOrderCode.Text + "'";
+            SqlStaging = @"SELECT DISTINCT
+		                        msio.StockInOrderID,
+		                        msio.LastUpdateDate,
+		                        msio.StockedIn,
+		                        msifi.ItemID
+	                        FROM erpsvr.FEAStaging.dbo.MaterialStockInOrder msio (NOLOCK)
+	                            INNER JOIN erpsvr.FEAStaging.dbo.MaterialStockInOrderAccessoryItems msifi (NOLOCK)
+                                ON msio.StockInOrderID = msifi.StockInOrderID
+		                        INNER JOIN erpsvr.FEAStaging.dbo.CustomerEntity wh (NOLOCK)
+		                        ON msio.WarehouseID = wh.CustomerID 
+		                        AND wh.CustomerCode IN(
+		                        'VN000A1405',--QC輔料進料進口倉 - VSIP 2
+		                        'VN000A1402',--輔料進料進口倉 - VSIP 2
+		                        'VN000A1102',--輔料來料進口倉 - VSIP 2
+		                        'VN000A1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1402'--主料進料進口倉  - VSIP 2
+		                        )
+	                        WHERE 1 = 1
+		                          AND msio.OrderType in (0,1,2,3,4,5,6,7,10,11)
+		                          AND msio.[Status] <> 'MSIO.DELETED'
+		                          AND msio.BLNumber like '%" + txtCodeee.Text + "%'"
+                            + @"UNION
+                            SELECT DISTINCT
+		                        msio.StockInOrderID,
+		                        msio.LastUpdateDate,
+		                        msio.StockedIn,
+		                        msifi.ItemID
+	                        FROM erpsvr.FEAStaging.dbo.MaterialStockInOrder msio (NOLOCK)
+	                            INNER JOIN erpsvr.FEAStaging.dbo.MaterialStockInOrderAccessoryItems msifi (NOLOCK)
+                                ON msio.StockInOrderID = msifi.StockInOrderID
+		                        INNER JOIN erpsvr.FEAStaging.dbo.CustomerEntity wh (NOLOCK)
+		                        ON msio.WarehouseID = wh.CustomerID 
+		                        AND wh.CustomerCode IN(
+		                        'VN000A1405',--QC輔料進料進口倉 - VSIP 2
+		                        'VN000A1402',--輔料進料進口倉 - VSIP 2
+		                        'VN000A1102',--輔料來料進口倉 - VSIP 2
+		                        'VN000A1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1402'--主料進料進口倉  - VSIP 2
+		                        )
+	                        WHERE 1 = 1
+		                          AND msio.OrderType in (0,1,2,3,4,5,6,7,10,11)
+		                          AND msio.[Status] <> 'MSIO.DELETED'
+		                          AND msio.OrderCode like '%" + txtCodeee.Text + "%'";
 
-            //SqlERP = @"SELECT msuo.StockOutOrderID, msuo.OrderCode, msuo.Status, msuo.OrderDate --msooai.Quantity
-            //                FROM dbo.MaterialStockOutOrder msuo (NOLOCK)
-            //                INNER JOIN dbo.MaterialStockOutOrderAccessoryItem msooai(NOLOCK)
-            //                ON msooai.StockOutOrderID = msuo.StockOutOrderID
-            //                WHERE msuo.OrderCode = '" + txtOrderCode.Text + "'";
+            SqlERP = @"SELECT DISTINCT
+		                        msio.StockInOrderID,
+		                        msio.LastUpdateDate,
+		                        msio.StockedIn,
+		                        msifi.ItemID
+	                        FROM dbo.MaterialStockInOrder msio (NOLOCK)
+	                            INNER JOIN dbo.MaterialStockInOrderAccessoryItems msifi (NOLOCK)
+                                ON msio.StockInOrderID = msifi.StockInOrderID
+		                        INNER JOIN dbo.CustomerEntity wh (NOLOCK)
+		                        ON msio.WarehouseID = wh.CustomerID 
+		                        AND wh.CustomerCode IN(
+		                        'VN000A1405',--QC輔料進料進口倉 - VSIP 2
+		                        'VN000A1402',--輔料進料進口倉 - VSIP 2
+		                        'VN000A1102',--輔料來料進口倉 - VSIP 2
+		                        'VN000A1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1402'--主料進料進口倉  - VSIP 2
+		                        )
+	                        WHERE 1 = 1
+		                          AND msio.OrderType in (0,1,2,3,4,5,6,7,10,11)
+		                          AND msio.[Status] <> 'MSIO.DELETED'
+		                          AND msio.BLNumber like '%" + txtCodeee.Text + "%'"
+                            + @"UNION
+                            SELECT DISTINCT
+		                        msio.StockInOrderID,
+		                        msio.LastUpdateDate,
+		                        msio.StockedIn,
+		                        msifi.ItemID
+	                        FROM dbo.MaterialStockInOrder msio (NOLOCK)
+	                            INNER JOIN dbo.MaterialStockInOrderAccessoryItems msifi (NOLOCK)
+                                ON msio.StockInOrderID = msifi.StockInOrderID
+		                        INNER JOIN dbo.CustomerEntity wh (NOLOCK)
+		                        ON msio.WarehouseID = wh.CustomerID 
+		                        AND wh.CustomerCode IN(
+		                        'VN000A1405',--QC輔料進料進口倉 - VSIP 2
+		                        'VN000A1402',--輔料進料進口倉 - VSIP 2
+		                        'VN000A1102',--輔料來料進口倉 - VSIP 2
+		                        'VN000A1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1502',--一般貿易倉 - VSIP 2
+		                        'VN000M1402'--主料進料進口倉  - VSIP 2
+		                        )
+	                        WHERE 1 = 1
+		                          AND msio.OrderType in (0,1,2,3,4,5,6,7,10,11)
+		                          AND msio.[Status] <> 'MSIO.DELETED'
+		                          AND msio.OrderCode like '%" + txtCodeee.Text + "%'";
+
             try
             {
                 connection.Open();
@@ -115,22 +196,22 @@ namespace SupportTools
                 DataTable dtWMS = new DataTable();
                 adapterWMS.Fill(dtWMS);
 
-                ////Staging
-                //SqlDataAdapter adapterStaging = new SqlDataAdapter(SqlStaging, connection);
-                //DataTable dtStaging = new DataTable();
-                //adapterStaging.Fill(dtStaging);
+                //Staging
+                SqlDataAdapter adapterStaging = new SqlDataAdapter(SqlStaging, connection);
+                DataTable dtStaging = new DataTable();
+                adapterStaging.Fill(dtStaging);
 
-                ////ERP
-                //SqlDataAdapter adapterERP = new SqlDataAdapter(SqlERP, connectionERP);
-                //DataTable dtERP = new DataTable();
-                //adapterERP.Fill(dtERP);
+                //ERP
+                SqlDataAdapter adapterERP = new SqlDataAdapter(SqlERP, connectionERP);
+                DataTable dtERP = new DataTable();
+                adapterERP.Fill(dtERP);
 
                 connection.Close();
                 connectionERP.Close();
 
                 gridControlDataWMS2.DataSource = dtWMS;
-                //gridControlDataStaging.DataSource = dtStaging;
-                //gridControlDataERP.DataSource = dtERP;
+                gridControlDataStaging2.DataSource = dtStaging;
+                gridControlDataERP2.DataSource = dtERP;
 
             }
             catch (Exception ex)
@@ -141,7 +222,7 @@ namespace SupportTools
 
         private void btnSync2_Click(object sender, EventArgs e)
         {
-            int day = Convert.ToInt32(txtDaySync.Text);
+            int day = Convert.ToInt32(txtDaySync2.Text);
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             try
@@ -177,12 +258,6 @@ namespace SupportTools
                 _OrderID = view.GetRowCellValue(hitInfo.RowHandle, "OrderID").ToString();
             }
         }
-
-        private void btnUpdate2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdate1_Click(object sender, EventArgs e)
         {
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;

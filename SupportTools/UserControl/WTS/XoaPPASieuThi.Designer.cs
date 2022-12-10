@@ -57,7 +57,7 @@
             // 
             // simpleButtonKiemTraInput
             // 
-            this.simpleButtonKiemTraInput.Location = new System.Drawing.Point(188, 6);
+            this.simpleButtonKiemTraInput.Location = new System.Drawing.Point(191, 6);
             this.simpleButtonKiemTraInput.Name = "simpleButtonKiemTraInput";
             this.simpleButtonKiemTraInput.Size = new System.Drawing.Size(120, 40);
             this.simpleButtonKiemTraInput.TabIndex = 68;
@@ -66,7 +66,7 @@
             // 
             // simpleButtonKiemTraPPA
             // 
-            this.simpleButtonKiemTraPPA.Location = new System.Drawing.Point(314, 6);
+            this.simpleButtonKiemTraPPA.Location = new System.Drawing.Point(317, 6);
             this.simpleButtonKiemTraPPA.Name = "simpleButtonKiemTraPPA";
             this.simpleButtonKiemTraPPA.Size = new System.Drawing.Size(120, 40);
             this.simpleButtonKiemTraPPA.TabIndex = 69;
@@ -75,7 +75,8 @@
             // 
             // simpleButtonXoaPPA
             // 
-            this.simpleButtonXoaPPA.Location = new System.Drawing.Point(546, 6);
+            this.simpleButtonXoaPPA.Enabled = false;
+            this.simpleButtonXoaPPA.Location = new System.Drawing.Point(549, 6);
             this.simpleButtonXoaPPA.Name = "simpleButtonXoaPPA";
             this.simpleButtonXoaPPA.Size = new System.Drawing.Size(100, 40);
             this.simpleButtonXoaPPA.TabIndex = 70;
@@ -84,7 +85,7 @@
             // 
             // simpleButtonXuatExcel
             // 
-            this.simpleButtonXuatExcel.Location = new System.Drawing.Point(440, 6);
+            this.simpleButtonXuatExcel.Location = new System.Drawing.Point(443, 6);
             this.simpleButtonXuatExcel.Name = "simpleButtonXuatExcel";
             this.simpleButtonXuatExcel.Size = new System.Drawing.Size(100, 40);
             this.simpleButtonXuatExcel.TabIndex = 72;

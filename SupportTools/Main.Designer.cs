@@ -114,14 +114,16 @@
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.accordionControl);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 37);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 35);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(256, 687);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(262, 692);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // accordionControl
             // 
             this.accordionControl.AllowItemSelection = true;
+            this.accordionControl.Appearance.AccordionControl.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.accordionControl.Appearance.AccordionControl.Options.UseFont = true;
             this.accordionControl.Appearance.Item.Disabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.accordionControl.Appearance.Item.Disabled.Options.UseBackColor = true;
             this.accordionControl.Appearance.Item.Hovered.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -141,13 +143,13 @@
             this.accordionControl.Location = new System.Drawing.Point(0, 0);
             this.accordionControl.LookAndFeel.SkinMaskColor = System.Drawing.SystemColors.Menu;
             this.accordionControl.LookAndFeel.SkinMaskColor2 = System.Drawing.SystemColors.ButtonFace;
-            this.accordionControl.LookAndFeel.SkinName = "Office 2007 Blue";
+            this.accordionControl.LookAndFeel.SkinName = "Office 2010 Blue";
             this.accordionControl.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.accordionControl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.accordionControl.Name = "accordionControl";
             this.accordionControl.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Fluent;
             this.accordionControl.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl.Size = new System.Drawing.Size(256, 687);
+            this.accordionControl.Size = new System.Drawing.Size(262, 692);
             this.accordionControl.TabIndex = 3;
             this.accordionControl.SelectedElementChanged += new DevExpress.XtraBars.Navigation.SelectedElementChangedEventHandler(this.accordionControl_SelectedElementChanged);
             // 
@@ -173,6 +175,8 @@
             this.accordionControlElement12.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Text = "ITS";
+
+
             // 
             // employeesAccordionControlElement
             // 
@@ -190,7 +194,7 @@
             // 
             // accordionControlElement2
             // 
-            this.accordionControlElement2.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.actions_remove;
+           this.accordionControlElement2.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.actions_remove;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement2.Text = "Cập nhật QC MPQ";
@@ -274,6 +278,7 @@
             this.accordionControlElement3,
             this.accordionControlElement25,
             this.accordionControlElement22});
+            this.accordionControlElement13.Expanded = true;
             this.accordionControlElement13.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement13.Name = "accordionControlElement13";
             this.accordionControlElement13.Text = "ERP";
@@ -306,6 +311,7 @@
             this.accordionControlElement16,
             this.accordionControlElement17,
             this.accordionControlElement18});
+            this.accordionControlElement14.Expanded = true;
             this.accordionControlElement14.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement14.Name = "accordionControlElement14";
             this.accordionControlElement14.Text = "WMS";
@@ -428,7 +434,7 @@
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Main.IconOptions.Icon")));
             this.IconOptions.Image = global::SupportTools.Properties.Resources._5;
             this.InactiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LookAndFeel.SkinName = "Seven";
+            this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.LookAndFeel.TouchUIMode = DevExpress.Utils.DefaultBoolean.True;
             this.LookAndFeel.UseDefaultLookAndFeel = false;

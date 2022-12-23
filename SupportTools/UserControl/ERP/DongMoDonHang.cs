@@ -12,6 +12,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using System.Reflection;
 
 namespace SupportTools
 {
@@ -72,6 +73,7 @@ namespace SupportTools
             {
                 gctrlListFEPO.DataSource = null;
             }
+            
         }
         private void UpdateIT(string fepo)
         {
@@ -382,7 +384,7 @@ namespace SupportTools
                     simplebtnPLMo.Enabled = true;
                     simplebtnPLDong.Enabled = true;
                 }
-            }
+                            }
             else
             { XtraMessageBox.Show("Vui lòng nhập FEPO.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
@@ -485,6 +487,38 @@ namespace SupportTools
             value1 = textBox1.Text;
             return dialogResult;
         }
+
+        private void memoFEPO_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gridView1_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView1.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewListFEPO_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewListFEPO.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
         public static DialogResult LKInputBox_w(string title, string promptText1, ref string value1)
         {
             DevExpress.XtraEditors.XtraForm form = new XtraForm();

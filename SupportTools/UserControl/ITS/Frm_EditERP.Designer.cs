@@ -103,6 +103,7 @@
             this.gridView4.OptionsBehavior.ReadOnly = true;
             this.gridView4.OptionsSelection.MultiSelect = true;
             this.gridView4.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gridView4.Click += new System.EventHandler(this.gridView4_Click);
             // 
             // simplebtnKiemTra
             // 
@@ -111,6 +112,7 @@
             this.simplebtnKiemTra.Size = new System.Drawing.Size(75, 23);
             this.simplebtnKiemTra.TabIndex = 71;
             this.simplebtnKiemTra.Text = "Kiểm tra";
+            this.simplebtnKiemTra.Click += new System.EventHandler(this.simplebtnKiemTra_Click);
             // 
             // simplebtnCapNhat
             // 
@@ -119,6 +121,7 @@
             this.simplebtnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.simplebtnCapNhat.TabIndex = 70;
             this.simplebtnCapNhat.Text = "Cập nhật";
+            this.simplebtnCapNhat.Click += new System.EventHandler(this.simplebtnCapNhat_Click);
             // 
             // txtTrangThai
             // 

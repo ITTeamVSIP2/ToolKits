@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThietLapQuyenHan));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.memoInsertFunc = new DevExpress.XtraEditors.MemoEdit();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButtonTiep = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonLui = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.memoInsertFunc = new DevExpress.XtraEditors.MemoEdit();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoInsertFunc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoInsertFunc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -67,6 +67,25 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "groupControl2";
             // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(503, 33);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 40);
+            this.btnThem.TabIndex = 71;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // memoInsertFunc
+            // 
+            this.memoInsertFunc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.memoInsertFunc.EditValue = resources.GetString("memoInsertFunc.EditValue");
+            this.memoInsertFunc.Location = new System.Drawing.Point(503, 83);
+            this.memoInsertFunc.Name = "memoInsertFunc";
+            this.memoInsertFunc.Size = new System.Drawing.Size(636, 286);
+            this.memoInsertFunc.TabIndex = 70;
+            // 
             // gridControl2
             // 
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -88,7 +107,9 @@
             this.gridView2.OptionsSelection.MultiSelect = true;
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.OptionsView.ShowFooter = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView2_CustomDrawFooter);
             // 
             // simpleButtonTiep
             // 
@@ -125,27 +146,10 @@
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView1_CustomDrawFooter);
             this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
-            // 
-            // memoInsertFunc
-            // 
-            this.memoInsertFunc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.memoInsertFunc.EditValue = resources.GetString("memoInsertFunc.EditValue");
-            this.memoInsertFunc.Location = new System.Drawing.Point(503, 83);
-            this.memoInsertFunc.Name = "memoInsertFunc";
-            this.memoInsertFunc.Size = new System.Drawing.Size(636, 286);
-            this.memoInsertFunc.TabIndex = 70;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(503, 33);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 40);
-            this.btnThem.TabIndex = 71;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ThietLapQuyenHan
             // 
@@ -158,11 +162,11 @@
             this.Size = new System.Drawing.Size(1164, 700);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.memoInsertFunc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoInsertFunc.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

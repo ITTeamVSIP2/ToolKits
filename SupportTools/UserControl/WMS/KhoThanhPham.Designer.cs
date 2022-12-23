@@ -33,11 +33,11 @@ namespace SupportTools
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnCheck3 = new DevExpress.XtraEditors.SimpleButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtSaE = new DevExpress.XtraEditors.TextEdit();
-            this.txtDaySync1 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControlListPDO = new DevExpress.XtraGrid.GridControl();
             this.gridViewListPDO = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtSaE = new DevExpress.XtraEditors.TextEdit();
+            this.txtDaySync1 = new DevExpress.XtraEditors.TextEdit();
             this.txtPDO = new DevExpress.XtraEditors.TextEdit();
             this.btnDeletePDO1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -56,12 +56,12 @@ namespace SupportTools
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSaE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDaySync1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlListPDO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewListPDO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDaySync1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPDO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDataStaging)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDataStaging)).BeginInit();
@@ -94,9 +94,9 @@ namespace SupportTools
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.groupControl1);
             this.tabPage1.Controls.Add(this.txtSaE);
             this.tabPage1.Controls.Add(this.txtDaySync1);
-            this.tabPage1.Controls.Add(this.groupControl1);
             this.tabPage1.Controls.Add(this.txtPDO);
             this.tabPage1.Controls.Add(this.btnDeletePDO1);
             this.tabPage1.Controls.Add(this.labelControl1);
@@ -105,9 +105,56 @@ namespace SupportTools
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(952, 547);
+            this.tabPage1.Size = new System.Drawing.Size(969, 569);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Đồng bộ Barcode";
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.gridControlListPDO);
+            this.groupControl1.Location = new System.Drawing.Point(6, 77);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(957, 486);
+            this.groupControl1.TabIndex = 15;
+            this.groupControl1.Text = "Danh sách";
+            // 
+            // gridControlListPDO
+            // 
+            this.gridControlListPDO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControlListPDO.Location = new System.Drawing.Point(5, 24);
+            this.gridControlListPDO.MainView = this.gridViewListPDO;
+            this.gridControlListPDO.Name = "gridControlListPDO";
+            this.gridControlListPDO.Size = new System.Drawing.Size(947, 457);
+            this.gridControlListPDO.TabIndex = 11;
+            this.gridControlListPDO.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewListPDO});
+            // 
+            // gridViewListPDO
+            // 
+            this.gridViewListPDO.GridControl = this.gridControlListPDO;
+            this.gridViewListPDO.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", null, "Total:")});
+            this.gridViewListPDO.Name = "gridViewListPDO";
+            this.gridViewListPDO.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.True;
+            this.gridViewListPDO.OptionsBehavior.Editable = false;
+            this.gridViewListPDO.OptionsBehavior.SummariesIgnoreNullValues = true;
+            this.gridViewListPDO.OptionsLayout.StoreDataSettings = false;
+            this.gridViewListPDO.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewListPDO.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gridViewListPDO.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.False;
+            this.gridViewListPDO.OptionsMenu.ShowGroupSortSummaryItems = false;
+            this.gridViewListPDO.OptionsMenu.ShowSummaryItemMode = DevExpress.Utils.DefaultBoolean.True;
+            this.gridViewListPDO.OptionsSelection.UseIndicatorForSelection = false;
+            this.gridViewListPDO.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+            this.gridViewListPDO.OptionsView.ShowFooter = true;
+            this.gridViewListPDO.OptionsView.ShowGroupPanel = false;
+            this.gridViewListPDO.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
+            this.gridViewListPDO.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewListPDO_CustomDrawFooter);
             // 
             // txtSaE
             // 
@@ -123,38 +170,6 @@ namespace SupportTools
             this.txtDaySync1.Name = "txtDaySync1";
             this.txtDaySync1.Size = new System.Drawing.Size(35, 20);
             this.txtDaySync1.TabIndex = 44;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.gridControlListPDO);
-            this.groupControl1.Location = new System.Drawing.Point(6, 77);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(940, 464);
-            this.groupControl1.TabIndex = 15;
-            this.groupControl1.Text = "Danh sách";
-            // 
-            // gridControlListPDO
-            // 
-            this.gridControlListPDO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControlListPDO.Location = new System.Drawing.Point(5, 24);
-            this.gridControlListPDO.MainView = this.gridViewListPDO;
-            this.gridControlListPDO.Name = "gridControlListPDO";
-            this.gridControlListPDO.Size = new System.Drawing.Size(930, 435);
-            this.gridControlListPDO.TabIndex = 11;
-            this.gridControlListPDO.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewListPDO});
-            // 
-            // gridViewListPDO
-            // 
-            this.gridViewListPDO.GridControl = this.gridControlListPDO;
-            this.gridViewListPDO.Name = "gridViewListPDO";
-            this.gridViewListPDO.OptionsBehavior.Editable = false;
-            this.gridViewListPDO.OptionsView.ShowGroupPanel = false;
             // 
             // txtPDO
             // 
@@ -212,16 +227,19 @@ namespace SupportTools
             this.gridViewDataStaging.GridControl = this.gridControlDataStaging;
             this.gridViewDataStaging.Name = "gridViewDataStaging";
             this.gridViewDataStaging.OptionsBehavior.Editable = false;
+            this.gridViewDataStaging.OptionsView.ShowFooter = true;
             this.gridViewDataStaging.OptionsView.ShowGroupPanel = false;
+            this.gridViewDataStaging.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewDataStaging_CustomDrawFooter);
             // 
             // gridControlDataStaging
             // 
-            this.gridControlDataStaging.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridControlDataStaging.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControlDataStaging.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataStaging.MainView = this.gridViewDataStaging;
             this.gridControlDataStaging.Name = "gridControlDataStaging";
-            this.gridControlDataStaging.Size = new System.Drawing.Size(426, 435);
+            this.gridControlDataStaging.Size = new System.Drawing.Size(599, 457);
             this.gridControlDataStaging.TabIndex = 22;
             this.gridControlDataStaging.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataStaging});
@@ -233,7 +251,7 @@ namespace SupportTools
             this.groupControl6.Controls.Add(this.gridControlDataStaging);
             this.groupControl6.Location = new System.Drawing.Point(6, 77);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(436, 464);
+            this.groupControl6.Size = new System.Drawing.Size(609, 486);
             this.groupControl6.TabIndex = 40;
             this.groupControl6.Text = "Dữ liệu Staging";
             // 
@@ -243,9 +261,9 @@ namespace SupportTools
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.Controls.Add(this.memoSQL);
-            this.groupControl4.Location = new System.Drawing.Point(448, 77);
+            this.groupControl4.Location = new System.Drawing.Point(621, 77);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(498, 464);
+            this.groupControl4.Size = new System.Drawing.Size(342, 486);
             this.groupControl4.TabIndex = 41;
             this.groupControl4.Text = "Kiểm tra SQL";
             // 
@@ -257,7 +275,7 @@ namespace SupportTools
             this.memoSQL.EditValue = resources.GetString("memoSQL.EditValue");
             this.memoSQL.Location = new System.Drawing.Point(5, 24);
             this.memoSQL.Name = "memoSQL";
-            this.memoSQL.Size = new System.Drawing.Size(488, 435);
+            this.memoSQL.Size = new System.Drawing.Size(332, 457);
             this.memoSQL.TabIndex = 0;
             // 
             // gridView1
@@ -275,7 +293,7 @@ namespace SupportTools
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(952, 547);
+            this.tabPage3.Size = new System.Drawing.Size(969, 569);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Kiểm tra Staging";
             // 
@@ -294,10 +312,10 @@ namespace SupportTools
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(13, 14);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(960, 573);
+            this.tabControl1.Size = new System.Drawing.Size(977, 595);
             this.tabControl1.TabIndex = 7;
             // 
             // groupControl2
@@ -327,12 +345,12 @@ namespace SupportTools
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSaE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDaySync1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlListPDO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewListPDO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDaySync1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPDO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDataStaging)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDataStaging)).EndInit();

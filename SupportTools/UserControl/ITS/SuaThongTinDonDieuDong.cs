@@ -88,9 +88,46 @@ namespace SupportTools
                 connection.Close();
                 gcInsert.DataSource = dt;
             }
-            catch (Exception ex)
+            catch// (Exception ex)
             {
             }
+        }
+
+        private void dgvAddLine_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+
+            e.DefaultDraw();
+            e.Cache.DrawString(dgvAddLine.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void dgvLine_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(dgvLine.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void dgvIEAbnormalTime_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(dgvIEAbnormalTime.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -112,7 +149,7 @@ namespace SupportTools
                 commandINSERT.ExecuteNonQuery();
                 MessageBox.Show("Insert successful.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            catch// (Exception ex)
             {
 
             }
@@ -132,10 +169,12 @@ namespace SupportTools
                 ctrl.Text = "Hủy";
             }
         }
+
+
         public static class MyExtenstions
         {
 
-            public static Control FindControl( Control root, string text)
+            public static Control FindControl(Control root, string text)
             {
                 if (root == null) throw new ArgumentNullException("root");
                 foreach (Control child in root.Controls)
@@ -171,7 +210,7 @@ namespace SupportTools
                 connection.Close();
                 gcIEAbnormalTime.DataSource = dt;
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
 
             }
@@ -201,7 +240,7 @@ namespace SupportTools
 
 
             }
-            catch (Exception ex)
+            catch// (Exception ex)
             {
 
             }
@@ -236,49 +275,9 @@ namespace SupportTools
                 connection.Close();
                 gcAddLine.DataSource = dt;
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
 
-            }
-        }
-        private void dgvIEAbnormalTime_ShowingPopupEditForm(object sender, ShowingPopupEditFormEventArgs e)
-        {
-            foreach (Control control in e.EditForm.Controls)
-            {
-                if (!(control is EditFormContainer))
-                {
-                    continue;
-                }
-                foreach (Control nestedControl in control.Controls)
-                {
-                    if (!(nestedControl is PanelControl))
-                    {
-                        continue;
-                    }
-                    foreach (Control button in nestedControl.Controls)
-                    {
-                        if (button is SimpleButton)
-                        {
-                            var simpleButton = button as SimpleButton;
-                            ChangeButtonCaption(simpleButton);
-                        }
-                    }
-                }
-            }
-        }
-        private void ChangeButtonCaption(SimpleButton simpleButton)
-        {
-            string newUpdateBtnText = "New Update";
-            string newCancelBtnText = "New Cancel";
-            string btnText = simpleButton.Text;
-            switch (btnText)
-            {
-                case "Update":
-                    simpleButton.Text = newUpdateBtnText;
-                    break;
-                case "Cancel":
-                    simpleButton.Text = newCancelBtnText;
-                    break;
             }
         }
         private void dgvIEAbnormalTime_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -346,25 +345,6 @@ namespace SupportTools
             {
                 XtraMessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        private void dgvIEAbnormalTime_Click(object sender, EventArgs e)
-        {
-            //GridView view = (GridView)sender;
-            //GridHitInfo hitInfo = view.CalcHitInfo(view.GridControl.PointToClient(Control.MousePosition));
-
-            //if (hitInfo.InRow)
-            //{
-            //    string id = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "ID"));
-            //    string orderCode = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "OrderCode"));
-            //    string des = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "Description"));
-            //    string stt = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "Status"));
-            //    string fromLineID = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "FromLineID"));
-            //    string toLineID = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "ToLineID"));
-            //    string sectionDetailID = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "SectionDetailID"));
-            //    string desDetail = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "DescriptionDetail"));
-            //}
 
         }
     }

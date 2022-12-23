@@ -258,5 +258,92 @@ namespace SupportTools
                 _FEPO = view.GetRowCellValue(hitInfo.RowHandle, "FEPO").ToString();
             }
         }
+
+        private void gridViewListOrderCode_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewListOrderCode.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewShowFEPO_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewShowFEPO.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewShowBarcode_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewShowBarcode.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewDataERP_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewDataERP.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewDataStaging_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewDataStaging.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewDataWMS_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewDataWMS.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void btnCheck3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSync3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

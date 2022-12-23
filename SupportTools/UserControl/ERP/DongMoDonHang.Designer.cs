@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DongMoDonHang));
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.simplebtnPLMo = new DevExpress.XtraEditors.SimpleButton();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
@@ -61,6 +64,11 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sBtnHoanThanh = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
@@ -71,6 +79,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.gctrlDR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl2.Controls.Add(this.groupBox1);
+            this.groupControl2.Location = new System.Drawing.Point(3, 3);
+            this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(1048, 691);
+            this.groupControl2.TabIndex = 219;
+            this.groupControl2.Text = "groupControl2";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.groupControl3);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1042, 685);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl3.Controls.Add(this.groupControl1);
+            this.groupControl3.Location = new System.Drawing.Point(0, 0);
+            this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(1042, 679);
+            this.groupControl3.TabIndex = 0;
+            this.groupControl3.Text = "groupControl3";
             // 
             // groupControl1
             // 
@@ -95,13 +146,13 @@
             this.groupControl1.Controls.Add(this.sBtnTruyVan);
             this.groupControl1.Controls.Add(this.gctrlDR);
             this.groupControl1.Controls.Add(this.sBtnHoanThanh);
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
+            this.groupControl1.Location = new System.Drawing.Point(6, 5);
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1048, 691);
-            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Size = new System.Drawing.Size(1030, 671);
+            this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "groupControl1";
             // 
             // simplebtnPLMo
@@ -121,13 +172,14 @@
             this.memoEdit1.EditValue = resources.GetString("memoEdit1.EditValue");
             this.memoEdit1.Location = new System.Drawing.Point(303, 293);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(723, 144);
+            this.memoEdit1.Size = new System.Drawing.Size(705, 144);
             this.memoEdit1.TabIndex = 76;
             // 
             // memoFEPO
             // 
             this.memoFEPO.Location = new System.Drawing.Point(23, 268);
             this.memoFEPO.Name = "memoFEPO";
+            this.memoFEPO.Properties.EditValueChanged += new System.EventHandler(this.memoFEPO_Properties_EditValueChanged);
             this.memoFEPO.Size = new System.Drawing.Size(131, 169);
             this.memoFEPO.TabIndex = 75;
             this.memoFEPO.TextChanged += new System.EventHandler(this.memoFEPO_TextChanged);
@@ -217,10 +269,11 @@
             this.gctrlListFEPO.Location = new System.Drawing.Point(23, 454);
             this.gctrlListFEPO.MainView = this.gridViewListFEPO;
             this.gctrlListFEPO.Name = "gctrlListFEPO";
-            this.gctrlListFEPO.Size = new System.Drawing.Size(1003, 223);
+            this.gctrlListFEPO.Size = new System.Drawing.Size(985, 203);
             this.gctrlListFEPO.TabIndex = 71;
             this.gctrlListFEPO.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewListFEPO});
+            this.gctrlListFEPO.DoubleClick += new System.EventHandler(this.gridViewListFEPO_DoubleClick);
             // 
             // gridViewListFEPO
             // 
@@ -237,7 +290,9 @@
             this.gridViewListFEPO.Name = "gridViewListFEPO";
             this.gridViewListFEPO.OptionsSelection.MultiSelect = true;
             this.gridViewListFEPO.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
-            this.gridViewListFEPO.DoubleClick += new System.EventHandler(this.gridViewListFEPO_DoubleClick);
+            this.gridViewListFEPO.OptionsView.ShowFooter = true;
+            this.gridViewListFEPO.OptionsView.ShowGroupPanel = false;
+            this.gridViewListFEPO.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewListFEPO_CustomDrawFooter);
             // 
             // gridColumn12
             // 
@@ -313,7 +368,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(23, 10);
+            this.labelControl9.Location = new System.Drawing.Point(26, 17);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(39, 13);
             this.labelControl9.TabIndex = 70;
@@ -322,7 +377,7 @@
             // txtDR
             // 
             this.txtDR.EditValue = "";
-            this.txtDR.Location = new System.Drawing.Point(68, 7);
+            this.txtDR.Location = new System.Drawing.Point(71, 13);
             this.txtDR.Margin = new System.Windows.Forms.Padding(0);
             this.txtDR.Name = "txtDR";
             this.txtDR.Size = new System.Drawing.Size(177, 20);
@@ -330,7 +385,7 @@
             // 
             // sBtnTruyVan
             // 
-            this.sBtnTruyVan.Location = new System.Drawing.Point(258, 6);
+            this.sBtnTruyVan.Location = new System.Drawing.Point(261, 3);
             this.sBtnTruyVan.Name = "sBtnTruyVan";
             this.sBtnTruyVan.Size = new System.Drawing.Size(100, 40);
             this.sBtnTruyVan.TabIndex = 67;
@@ -344,7 +399,7 @@
             this.gctrlDR.Location = new System.Drawing.Point(23, 75);
             this.gctrlDR.MainView = this.gridView1;
             this.gctrlDR.Name = "gctrlDR";
-            this.gctrlDR.Size = new System.Drawing.Size(1003, 163);
+            this.gctrlDR.Size = new System.Drawing.Size(985, 163);
             this.gctrlDR.TabIndex = 68;
             this.gctrlDR.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -360,6 +415,9 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView1_CustomDrawFooter);
             // 
             // gridColumn1
             // 
@@ -395,7 +453,7 @@
             // 
             // sBtnHoanThanh
             // 
-            this.sBtnHoanThanh.Location = new System.Drawing.Point(364, 6);
+            this.sBtnHoanThanh.Location = new System.Drawing.Point(367, 3);
             this.sBtnHoanThanh.Name = "sBtnHoanThanh";
             this.sBtnHoanThanh.Size = new System.Drawing.Size(100, 40);
             this.sBtnHoanThanh.TabIndex = 69;
@@ -407,9 +465,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.groupControl2);
             this.Name = "DongMoDonHang";
             this.Size = new System.Drawing.Size(1054, 697);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -426,6 +489,9 @@
 
         #endregion
 
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton simplebtnPLMo;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;

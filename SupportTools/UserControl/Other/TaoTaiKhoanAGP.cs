@@ -68,5 +68,17 @@ namespace SupportTools
                 XtraMessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void gridViewList_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewList.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
     }
 }

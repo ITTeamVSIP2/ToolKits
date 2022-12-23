@@ -216,7 +216,7 @@ namespace SupportTools
             this.groupControl1.Controls.Add(this.gridControlDataWMS);
             this.groupControl1.Location = new System.Drawing.Point(6, 77);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(764, 205);
+            this.groupControl1.Size = new System.Drawing.Size(784, 205);
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "Dữ liệu WMS";
             // 
@@ -227,7 +227,7 @@ namespace SupportTools
             this.gridControlDataWMS.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataWMS.MainView = this.gridViewDataWMS;
             this.gridControlDataWMS.Name = "gridControlDataWMS";
-            this.gridControlDataWMS.Size = new System.Drawing.Size(754, 176);
+            this.gridControlDataWMS.Size = new System.Drawing.Size(774, 176);
             this.gridControlDataWMS.TabIndex = 22;
             this.gridControlDataWMS.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataWMS});
@@ -237,7 +237,9 @@ namespace SupportTools
             this.gridViewDataWMS.GridControl = this.gridControlDataWMS;
             this.gridViewDataWMS.Name = "gridViewDataWMS";
             this.gridViewDataWMS.OptionsBehavior.Editable = false;
+            this.gridViewDataWMS.OptionsView.ShowFooter = true;
             this.gridViewDataWMS.OptionsView.ShowGroupPanel = false;
+            this.gridViewDataWMS.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewDataWMS_CustomDrawFooter);
             // 
             // txtDaySync2
             // 
@@ -253,7 +255,7 @@ namespace SupportTools
             this.groupControl2.Controls.Add(this.gridControlDataStaging);
             this.groupControl2.Location = new System.Drawing.Point(6, 288);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(764, 205);
+            this.groupControl2.Size = new System.Drawing.Size(784, 205);
             this.groupControl2.TabIndex = 32;
             this.groupControl2.Text = "Dữ liệu Staging";
             // 
@@ -264,7 +266,7 @@ namespace SupportTools
             this.gridControlDataStaging.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataStaging.MainView = this.gridViewDataStaging;
             this.gridControlDataStaging.Name = "gridControlDataStaging";
-            this.gridControlDataStaging.Size = new System.Drawing.Size(754, 176);
+            this.gridControlDataStaging.Size = new System.Drawing.Size(774, 176);
             this.gridControlDataStaging.TabIndex = 21;
             this.gridControlDataStaging.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataStaging});
@@ -274,7 +276,9 @@ namespace SupportTools
             this.gridViewDataStaging.GridControl = this.gridControlDataStaging;
             this.gridViewDataStaging.Name = "gridViewDataStaging";
             this.gridViewDataStaging.OptionsBehavior.Editable = false;
+            this.gridViewDataStaging.OptionsView.ShowFooter = true;
             this.gridViewDataStaging.OptionsView.ShowGroupPanel = false;
+            this.gridViewDataStaging.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewDataStaging_CustomDrawFooter);
             // 
             // txtCodeee
             // 
@@ -292,7 +296,7 @@ namespace SupportTools
             this.groupControl3.Controls.Add(this.gridControlDataERP);
             this.groupControl3.Location = new System.Drawing.Point(6, 499);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(764, 205);
+            this.groupControl3.Size = new System.Drawing.Size(784, 227);
             this.groupControl3.TabIndex = 32;
             this.groupControl3.Text = "Dữ liệu ERP";
             // 
@@ -304,7 +308,7 @@ namespace SupportTools
             this.gridControlDataERP.Location = new System.Drawing.Point(5, 24);
             this.gridControlDataERP.MainView = this.gridViewDataERP;
             this.gridControlDataERP.Name = "gridControlDataERP";
-            this.gridControlDataERP.Size = new System.Drawing.Size(754, 176);
+            this.gridControlDataERP.Size = new System.Drawing.Size(774, 198);
             this.gridControlDataERP.TabIndex = 20;
             this.gridControlDataERP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDataERP});
@@ -314,7 +318,9 @@ namespace SupportTools
             this.gridViewDataERP.GridControl = this.gridControlDataERP;
             this.gridViewDataERP.Name = "gridViewDataERP";
             this.gridViewDataERP.OptionsBehavior.Editable = false;
+            this.gridViewDataERP.OptionsView.ShowFooter = true;
             this.gridViewDataERP.OptionsView.ShowGroupPanel = false;
+            this.gridViewDataERP.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewDataERP_CustomDrawFooter);
             // 
             // groupControl5
             // 
@@ -389,7 +395,7 @@ namespace SupportTools
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 710);
+            this.tabPage2.Size = new System.Drawing.Size(796, 732);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "In gộp";
             // 
@@ -409,10 +415,10 @@ namespace SupportTools
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(13, 14);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(784, 736);
+            this.tabControl1.Size = new System.Drawing.Size(804, 758);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -430,7 +436,7 @@ namespace SupportTools
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(776, 710);
+            this.tabPage1.Size = new System.Drawing.Size(796, 732);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cài đặt xuất kho";
             // 

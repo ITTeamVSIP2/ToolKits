@@ -38,7 +38,7 @@ namespace SupportTools
                 connection.Close();
                 gridControl2.DataSource = dt;
             }
-            catch (Exception ex)
+            catch// (Exception ex)
             {
 
             }
@@ -62,7 +62,7 @@ namespace SupportTools
                 XtraMessageBox.Show("Đã đẩy ERP. OK.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 bthKiemTraTick.PerformClick();
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
 
             }
@@ -86,7 +86,7 @@ namespace SupportTools
                 XtraMessageBox.Show("Chưa đẩy ERP. OK.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 bthKiemTraTick.PerformClick();
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
 
             }

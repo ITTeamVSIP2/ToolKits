@@ -258,6 +258,43 @@ namespace SupportTools
                 _OrderID = view.GetRowCellValue(hitInfo.RowHandle, "OrderID").ToString();
             }
         }
+        
+        private void gridViewDataERP_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewDataERP.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewDataStaging_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewDataStaging.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewDataWMS_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridViewDataWMS.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
         private void btnUpdate1_Click(object sender, EventArgs e)
         {
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;

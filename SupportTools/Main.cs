@@ -110,6 +110,7 @@ namespace SupportTools
             xtra.Parent = result;
             return result;
         }
+
         XtraUserControl OpenControl4(string text)
         {
             XtraUserControl result = new XtraUserControl();
@@ -282,6 +283,8 @@ namespace SupportTools
             xtra.Parent = result;
             return result;
         }
+
+
         private void accordionControl_SelectedElementChanged(object sender, DevExpress.XtraBars.Navigation.SelectedElementChangedEventArgs e)
         {
             if (e.Element == null) return;
@@ -385,6 +388,8 @@ namespace SupportTools
                 tabbedView.AddDocument(_Control20);
                 tabbedView.ActivateDocument(_Control20);
             }
+
+
         }
 
         private void tabbedView_DocumentClosed(object sender, DevExpress.XtraBars.Docking2010.Views.DocumentEventArgs e)

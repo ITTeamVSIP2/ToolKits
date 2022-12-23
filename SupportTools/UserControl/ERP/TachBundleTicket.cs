@@ -42,7 +42,7 @@ namespace SupportTools
                 gridView1.Columns["OrderDate"].Width = 80;
                 gridView1.Columns["DealPerson"].Width = 80;
             }
-            catch (Exception ex)
+            catch// (Exception ex)
             {
                 gridControl1.DataSource = null;
             }
@@ -63,13 +63,24 @@ namespace SupportTools
                 connection.Close();
                 XtraMessageBox.Show("OK.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            catch //(Exception ex)
             {
 
             }
         }
 
-       
+        private void gridView1_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView1.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
 
         private void gridView1_Click(object sender, EventArgs e)
         {

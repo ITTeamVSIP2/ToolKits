@@ -89,6 +89,12 @@ namespace SupportTools
                         FROM dbo.ISCarBooking 
                         WHERE BookingCode='" + text + "'";
             }
+            if (flag == 14)
+            {
+                sql = @"SELECT ID, OrderCode, CreatorID, CreateDate, Status
+                        FROM dbo.ExportItem 
+                        WHERE OrderCode='" + text + "'";
+            }
             SqlDataAdapter adapter;
             adapter = new SqlDataAdapter(sql, con);
             DataSet ds = new DataSet();

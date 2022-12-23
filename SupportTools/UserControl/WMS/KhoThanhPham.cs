@@ -21,6 +21,8 @@ namespace SupportTools
         public KhoThanhPham()
         {
             InitializeComponent();
+            
+
         }
         private void btnCheckPDO1_Click(object sender, EventArgs e)
         {
@@ -43,13 +45,14 @@ namespace SupportTools
                 adapter.Fill(dt);
                 connection.Close();
                 gridControlListPDO.DataSource = dt;
-
+                
 
             }
             catch (Exception ex)
             {
                 txtPDO.Text = ex.Message;
             }
+
         }
 
         private void btnCheck3_Click(object sender, EventArgs e)
@@ -87,6 +90,7 @@ namespace SupportTools
             {
                 txtPDO.Text = ex.Message;
             }
+
         }
 
         private void btnSyncPDO1_Click(object sender, EventArgs e)
@@ -113,6 +117,33 @@ namespace SupportTools
                     txtPDO.Text = ex.Message;
                 }
             }
+        }
+
+
+        private void gridViewListPDO_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            
+            e.DefaultDraw();
+            e.Cache.DrawString("Total:"+gridViewListPDO.RowCount, e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridViewDataStaging_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+
+            e.DefaultDraw();
+            e.Cache.DrawString("Total:" + gridViewListPDO.RowCount, e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
         }
     }
 }

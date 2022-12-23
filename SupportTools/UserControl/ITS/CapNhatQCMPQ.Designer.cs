@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery2 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CapNhatQCMPQ));
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.dgInvoice = new DevExpress.XtraGrid.GridControl();
-            this.sqlDataSource3 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colInvoiceNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,60 +50,82 @@
             this.simplebtnTruyVan = new DevExpress.XtraEditors.SimpleButton();
             this.txt_Invoice = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.collectionDataSource1 = new DevExpress.Persistent.Base.ReportsV2.CollectionDataSource();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Invoice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupControl1
+            // imageCollection1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.groupControl1.Controls.Add(this.dgInvoice);
-            this.groupControl1.Controls.Add(this.simpleButtonDongBoInvoice);
-            this.groupControl1.Controls.Add(this.simplebtnTruyVan);
-            this.groupControl1.Controls.Add(this.txt_Invoice);
-            this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
-            this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1158, 694);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "groupControl1";
+            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl2.Controls.Add(this.groupBox1);
+            this.groupControl2.Location = new System.Drawing.Point(3, 3);
+            this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(882, 344);
+            this.groupControl2.TabIndex = 218;
+            this.groupControl2.Text = "groupControl2";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.groupControl3);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(876, 338);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl3.Controls.Add(this.dgInvoice);
+            this.groupControl3.Controls.Add(this.simpleButtonDongBoInvoice);
+            this.groupControl3.Controls.Add(this.simplebtnTruyVan);
+            this.groupControl3.Controls.Add(this.txt_Invoice);
+            this.groupControl3.Controls.Add(this.labelControl9);
+            this.groupControl3.Location = new System.Drawing.Point(6, 13);
+            this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(864, 319);
+            this.groupControl3.TabIndex = 0;
+            this.groupControl3.Text = "groupControl3";
             // 
             // dgInvoice
             // 
             this.dgInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgInvoice.DataMember = "Query";
-            this.dgInvoice.DataSource = this.sqlDataSource3;
-            this.dgInvoice.Location = new System.Drawing.Point(13, 62);
+            this.dgInvoice.Location = new System.Drawing.Point(12, 61);
             this.dgInvoice.MainView = this.gridView1;
             this.dgInvoice.Name = "dgInvoice";
-            this.dgInvoice.Size = new System.Drawing.Size(1132, 615);
-            this.dgInvoice.TabIndex = 63;
+            this.dgInvoice.Size = new System.Drawing.Size(837, 242);
+            this.dgInvoice.TabIndex = 73;
             this.dgInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // sqlDataSource3
-            // 
-            this.sqlDataSource3.ConnectionName = "localhost_FEAERP_VN_Connection";
-            this.sqlDataSource3.Name = "sqlDataSource3";
-            customSqlQuery2.Name = "Query";
-            customSqlQuery2.Sql = resources.GetString("customSqlQuery2.Sql");
-            this.sqlDataSource3.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            customSqlQuery2});
-            this.sqlDataSource3.ResultSchemaSerializable = resources.GetString("sqlDataSource3.ResultSchemaSerializable");
             // 
             // gridView1
             // 
@@ -119,6 +142,9 @@
             this.colScheduleCode});
             this.gridView1.GridControl = this.dgInvoice;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView1_CustomDrawFooter);
             // 
             // colInvoiceNo
             // 
@@ -201,52 +227,38 @@
             // 
             // simpleButtonDongBoInvoice
             // 
-            this.simpleButtonDongBoInvoice.Location = new System.Drawing.Point(380, 6);
+            this.simpleButtonDongBoInvoice.Location = new System.Drawing.Point(437, 15);
             this.simpleButtonDongBoInvoice.Margin = new System.Windows.Forms.Padding(0);
             this.simpleButtonDongBoInvoice.Name = "simpleButtonDongBoInvoice";
             this.simpleButtonDongBoInvoice.Size = new System.Drawing.Size(150, 40);
-            this.simpleButtonDongBoInvoice.TabIndex = 61;
+            this.simpleButtonDongBoInvoice.TabIndex = 72;
             this.simpleButtonDongBoInvoice.Text = "Đồng bộ invoice";
             this.simpleButtonDongBoInvoice.Click += new System.EventHandler(this.simpleButtonDongBoInvoice_Click);
             // 
             // simplebtnTruyVan
             // 
-            this.simplebtnTruyVan.Location = new System.Drawing.Point(274, 6);
+            this.simplebtnTruyVan.Location = new System.Drawing.Point(310, 15);
             this.simplebtnTruyVan.Name = "simplebtnTruyVan";
             this.simplebtnTruyVan.Size = new System.Drawing.Size(100, 40);
-            this.simplebtnTruyVan.TabIndex = 60;
+            this.simplebtnTruyVan.TabIndex = 71;
             this.simplebtnTruyVan.Text = "Truy vấn";
             this.simplebtnTruyVan.Click += new System.EventHandler(this.simplebtnTruyVan_Click);
             // 
             // txt_Invoice
             // 
             this.txt_Invoice.EditValue = "";
-            this.txt_Invoice.Location = new System.Drawing.Point(96, 7);
+            this.txt_Invoice.Location = new System.Drawing.Point(102, 25);
             this.txt_Invoice.Name = "txt_Invoice";
             this.txt_Invoice.Size = new System.Drawing.Size(162, 20);
-            this.txt_Invoice.TabIndex = 59;
+            this.txt_Invoice.TabIndex = 70;
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(23, 10);
+            this.labelControl9.Location = new System.Drawing.Point(29, 29);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(67, 13);
-            this.labelControl9.TabIndex = 58;
+            this.labelControl9.TabIndex = 69;
             this.labelControl9.Text = "Nhập Invoice:";
-            // 
-            // collectionDataSource1
-            // 
-            this.collectionDataSource1.Name = "collectionDataSource1";
-            this.collectionDataSource1.ObjectTypeName = null;
-            this.collectionDataSource1.TopReturnedRecords = 0;
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            // 
-            // sqlDataSource2
-            // 
-            this.sqlDataSource2.Name = "sqlDataSource2";
             // 
             // CapNhatQCMPQ
             // 
@@ -254,33 +266,30 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.groupControl2);
             this.Name = "CapNhatQCMPQ";
-            this.Size = new System.Drawing.Size(1164, 700);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            this.Size = new System.Drawing.Size(888, 350);
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Invoice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButtonDongBoInvoice;
-        private DevExpress.XtraEditors.SimpleButton simplebtnTruyVan;
-        private DevExpress.XtraEditors.TextEdit txt_Invoice;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.Persistent.Base.ReportsV2.CollectionDataSource collectionDataSource1;
+        private DevExpress.Utils.ImageCollection imageCollection1;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraGrid.GridControl dgInvoice;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource3;
         private DevExpress.XtraGrid.Columns.GridColumn colInvoiceNo;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerID;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
@@ -291,5 +300,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTotalYards;
         private DevExpress.XtraGrid.Columns.GridColumn colTotalRoll;
         private DevExpress.XtraGrid.Columns.GridColumn colScheduleCode;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonDongBoInvoice;
+        private DevExpress.XtraEditors.SimpleButton simplebtnTruyVan;
+        private DevExpress.XtraEditors.TextEdit txt_Invoice;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }

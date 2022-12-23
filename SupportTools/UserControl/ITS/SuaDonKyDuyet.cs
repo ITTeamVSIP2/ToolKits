@@ -321,6 +321,42 @@ namespace SupportTools
             f.ShowDialog();
         }
 
+        private void gridView1_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView1.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridView2_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView2.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridView3_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView3.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
         private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
             flag = 1;
@@ -390,6 +426,11 @@ namespace SupportTools
                     {
                         ID = view.GetRowCellValue(hitInfo.RowHandle, "BookingID").ToString();
                         OrderCode = view.GetRowCellValue(hitInfo.RowHandle, "BookingCode").ToString();
+                    }
+                    if (flagtemp == 14)
+                    {
+                        ID = view.GetRowCellValue(hitInfo.RowHandle, "ID").ToString();
+                        OrderCode = view.GetRowCellValue(hitInfo.RowHandle, "OrderCode").ToString();
                     }
                     Status = view.GetRowCellValue(hitInfo.RowHandle, "Status").ToString();
                 }
@@ -621,6 +662,7 @@ namespace SupportTools
                 gridControl3.DataSource = null;
                 gridView3.Columns.Clear();
             }
+
             string connString = ConfigurationManager.ConnectionStrings["ITS_Server"].ConnectionString;
             SQL_Control1 query = new SQL_Control1();
             if (labelControlLoaiDon.Text== "Đơn mua VTTT")
@@ -674,6 +716,10 @@ namespace SupportTools
             if (labelControlLoaiDon.Text == "Đơn đặt xe")
             {
                 flagtemp = 13;
+            }
+            if (labelControlLoaiDon.Text =="Khu vực bảo vệ")
+            {
+                flagtemp = 14;
             }
 
             try
@@ -758,6 +804,12 @@ namespace SupportTools
                         sqlUp = @"SELECT TOP 1 BookingCode AS 'CodeA'
                         FROM dbo.ISCarBooking
                         WHERE BookingCode LIKE'" + _a + "%' ORDER BY BookingCode DESC";
+                    }
+                    if (flagtemp == 14)
+                    {
+                        sqlUp = @"SELECT TOP 1 OrderCode AS 'CodeA'
+                        FROM dbo.ExportItem
+                        WHERE OrderCode LIKE'" + _a + "%' ORDER BY OrderCode DESC";
                     }
                     var connection = new SqlConnection(connString);
                     connection.Open();
@@ -962,6 +1014,7 @@ namespace SupportTools
             table.Rows.Add("Phiếu khác từ ERP");
             table.Rows.Add("Đơn mua văn phòng phẩm");
             table.Rows.Add("Đơn đặt xe");
+            table.Rows.Add("Khu vực bảo vệ");
             table.Rows.Add("Khác");
             gridControl4.DataSource = table;
         }

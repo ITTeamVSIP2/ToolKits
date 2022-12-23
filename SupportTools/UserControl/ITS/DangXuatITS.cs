@@ -13,7 +13,7 @@ using DevExpress.XtraEditors;
 
 namespace SupportTools
 {
-    public partial class DangXuatITS : UserControl
+    public partial class DangXuatITS : DevExpress.XtraEditors.XtraUserControl
     {
         public DangXuatITS()
         {

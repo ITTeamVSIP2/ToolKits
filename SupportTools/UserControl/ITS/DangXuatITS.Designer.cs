@@ -96,6 +96,7 @@
             this.simplebtnDangxuat.Size = new System.Drawing.Size(100, 40);
             this.simplebtnDangxuat.TabIndex = 222;
             this.simplebtnDangxuat.Text = "Đăng xuất";
+            this.simplebtnDangxuat.Click += new System.EventHandler(this.simplebtnDangxuat_Click);
             // 
             // labelControl2
             // 

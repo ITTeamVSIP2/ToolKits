@@ -38,6 +38,7 @@ namespace SupportTools
             this.btnCapNhatTick = new DevExpress.XtraEditors.SimpleButton();
             this.memoBarcode = new DevExpress.XtraEditors.MemoEdit();
             this.bthKiemTraTick = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -146,12 +147,19 @@ namespace SupportTools
             // 
             // bthKiemTraTick
             // 
+            this.bthKiemTraTick.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.bthKiemTraTick.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.finishmerge;
+            this.bthKiemTraTick.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.bthKiemTraTick.Location = new System.Drawing.Point(183, 7);
             this.bthKiemTraTick.Name = "bthKiemTraTick";
             this.bthKiemTraTick.Size = new System.Drawing.Size(100, 40);
             this.bthKiemTraTick.TabIndex = 63;
             this.bthKiemTraTick.Text = "Kiểm tra";
             this.bthKiemTraTick.Click += new System.EventHandler(this.bthKiemTraTick_Click);
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // ThemTickGP
             // 
@@ -185,5 +193,6 @@ namespace SupportTools
         private DevExpress.XtraEditors.SimpleButton btnCapNhatTick;
         private DevExpress.XtraEditors.MemoEdit memoBarcode;
         private DevExpress.XtraEditors.SimpleButton bthKiemTraTick;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

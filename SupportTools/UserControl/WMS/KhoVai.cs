@@ -34,6 +34,7 @@ namespace SupportTools
         }
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             Sql = "SELECT ms.MaterialCode, dtl.MaterialID AS 'MaterialIDdtl', ms.ColorCode, ms.ColorID, ms.MaterialID AS 'MaterialIDms' FROM FEWMS.dbo.FabricOutputOrderDtl dtl (NOLOCK)"
@@ -50,16 +51,20 @@ namespace SupportTools
                 adapter.Fill(dt);
                 connection.Close();
                 gridControlListOrderCode.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
 
             }
             catch (Exception ex)
             {
+                splashScreenManager1.Dispose();
                 txtOrderCode.Text = ex.Message;
+               
             }
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             //Sql = "SELECT OrderCode, CustomerName, StartNo, EndNo, CartonBarCodePrefix, BarcodeStart, BarcodeEnd FROM ProductPackageDetailItem WHERE OrderCode = 'PDO-" + txtCodePDOOld.Text + "'";
@@ -73,15 +78,18 @@ namespace SupportTools
                 adapter.Fill(dt);
                 connection.Close();
                 gridControlListOrderCode.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
+                splashScreenManager1.Dispose();
                 txtOrderCode.Text = ex.Message;
             }
         }
 
         private void btnUpdate1_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             connection.Open();
@@ -94,9 +102,11 @@ namespace SupportTools
                 commandPrefix.ExecuteNonQuery();
                 connection.Close();
                 XtraMessageBox.Show("Cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
+                splashScreenManager1.Dispose();
                 txtOrderCode.Text = ex.Message;
             }
         }
@@ -117,6 +127,7 @@ namespace SupportTools
 
         private void btnShowFEPO_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             Sqlbarcode = "IF OBJECT_ID('tempdb..#temp') IS NOT NULL"
@@ -136,6 +147,7 @@ namespace SupportTools
                 adapter1.Fill(dt);
                 connection.Close();
                 gridControlShowFEPO.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
@@ -160,6 +172,7 @@ namespace SupportTools
 
         private void btnShowBarcode_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string sqlSN = "SELECT SN, BarCode, FEPOCode FROM MaterialStockFabric WHERE 1=1 AND FEPOCode='" + txtFEPO.Text + "'";
@@ -171,6 +184,7 @@ namespace SupportTools
 
             connection.Close();
             gridControlShowBarcode.DataSource = dt;
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void btnUpdate2_Click(object sender, EventArgs e)
@@ -233,6 +247,7 @@ namespace SupportTools
                 {
                     connection.Close();
                     XtraMessageBox.Show("Cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else
                 {

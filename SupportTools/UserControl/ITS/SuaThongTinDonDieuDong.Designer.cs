@@ -215,6 +215,7 @@ namespace SupportTools
             this.dgvIEAbnormalTime.GridControl = this.gcIEAbnormalTime;
             this.dgvIEAbnormalTime.Name = "dgvIEAbnormalTime";
             this.dgvIEAbnormalTime.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
+            this.dgvIEAbnormalTime.OptionsView.ShowFooter = true;
             this.dgvIEAbnormalTime.OptionsView.ShowGroupPanel = false;
             this.dgvIEAbnormalTime.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.dgvIEAbnormalTime.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.dgvIEAbnormalTime_CustomDrawFooter);

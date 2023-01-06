@@ -22,6 +22,7 @@ namespace SupportTools
         }
         private void bthKiemTraTick_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WTS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string a = memoBarcode.Text.TrimEnd().ToString().Replace("\r\n", ",");
@@ -37,15 +38,17 @@ namespace SupportTools
                 adapter.Fill(dt);
                 connection.Close();
                 gridControl2.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
             }
             catch// (Exception ex)
             {
-
+                splashScreenManager1.Dispose();
             }
         }
 
         private void btnCapNhatTick_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WTS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string a = memoBarcode.Text.TrimEnd().ToString().Replace("\r\n", ",");
@@ -59,17 +62,20 @@ namespace SupportTools
                 SqlCommand commandPrefix = new SqlCommand(Sql, connection);
                 commandPrefix.ExecuteNonQuery();
                 connection.Close();
+                splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Đã đẩy ERP. OK.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 bthKiemTraTick.PerformClick();
+               
             }
             catch //(Exception ex)
             {
-
+                splashScreenManager1.Dispose();
             }
         }
 
         private void btnCapNhatTick0_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WTS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string a = memoBarcode.Text.TrimEnd().ToString().Replace("\r\n", ",");
@@ -83,12 +89,14 @@ namespace SupportTools
                 SqlCommand commandPrefix = new SqlCommand(Sql, connection);
                 commandPrefix.ExecuteNonQuery();
                 connection.Close();
+                splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Chưa đẩy ERP. OK.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 bthKiemTraTick.PerformClick();
+               
             }
             catch //(Exception ex)
             {
-
+                splashScreenManager1.Dispose();
             }
         }
     }

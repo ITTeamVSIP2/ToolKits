@@ -17,7 +17,7 @@ namespace SupportTools
         XtraUserControl _Control1, _Control2, _Control3, _Control4, _Control5, 
             _Control6, _Control7, _Control8, _Control9, _Control10, _Control11, 
             _Control12,_Control13, _Control14, _Control15, _Control16, _Control17, 
-            _Control18, _Control19, _Control20;
+            _Control18, _Control19, _Control20, _Control21, _Control22;
         string suadonkyduyet = "Sửa đơn ký duyệt";
         string kiemtraluutrinh = "Kiểm tra lưu trình";
         string capnhatmavattu = "Cập nhật mã vật tư";
@@ -38,6 +38,8 @@ namespace SupportTools
         string themdautickgp = "Thêm dấu tick GP";
         string suathongtindondieudong = "Sửa thông tin đơn điều động";
         string taotaikhoanAGP = "Tạo tài khoản AGP";
+        string chinhsuabophanchuyenmay = "Chỉnh sửa bộ phận chuyền may";
+        string giahanphieumuon = "Gia hạn phiếu mượn";
         public Main()
         {
             // sửa text search menu
@@ -63,6 +65,8 @@ namespace SupportTools
             _Control18 = OpenControl18(themdautickgp);
             _Control19 = OpenControl19(suathongtindondieudong);
             _Control20 = OpenControl20(taotaikhoanAGP);
+            _Control21 = OpenControl21(chinhsuabophanchuyenmay);
+            _Control22 = OpenControl22(giahanphieumuon);
         }
         // sửa text search menu
         public class CustomBarLocalizer : BarLocalizer
@@ -283,7 +287,26 @@ namespace SupportTools
             xtra.Parent = result;
             return result;
         }
-
+        XtraUserControl OpenControl21(string text)
+        {
+            XtraUserControl result = new XtraUserControl();
+            result.Name = text.ToLower() + "UserControl";
+            result.Text = text;
+            ChinhSuaBoPhanChuyenMay xtra = new ChinhSuaBoPhanChuyenMay();
+            xtra.Dock = System.Windows.Forms.DockStyle.Fill;
+            xtra.Parent = result;
+            return result;
+        }
+        XtraUserControl OpenControl22(string text)
+        {
+            XtraUserControl result = new XtraUserControl();
+            result.Name = text.ToLower() + "UserControl";
+            result.Text = text;
+            GiaHanPhieuMuon xtra = new GiaHanPhieuMuon();
+            xtra.Dock = System.Windows.Forms.DockStyle.Fill;
+            xtra.Parent = result;
+            return result;
+        }
 
         private void accordionControl_SelectedElementChanged(object sender, DevExpress.XtraBars.Navigation.SelectedElementChangedEventArgs e)
         {
@@ -388,7 +411,16 @@ namespace SupportTools
                 tabbedView.AddDocument(_Control20);
                 tabbedView.ActivateDocument(_Control20);
             }
-
+            if (e.Element.Text == chinhsuabophanchuyenmay)
+            {
+                tabbedView.AddDocument(_Control21);
+                tabbedView.ActivateDocument(_Control21);
+            }
+            if (e.Element.Text == giahanphieumuon)
+            {
+                tabbedView.AddDocument(_Control22);
+                tabbedView.ActivateDocument(_Control22);
+            }
 
         }
 
@@ -414,6 +446,8 @@ namespace SupportTools
             if (e.Document.Caption == themdautickgp) _Control18 = OpenControl18(themdautickgp);
             if (e.Document.Caption == suathongtindondieudong) _Control19 = OpenControl19(suathongtindondieudong);
             if (e.Document.Caption == taotaikhoanAGP) _Control20 = OpenControl20(taotaikhoanAGP);
+            if (e.Document.Caption == chinhsuabophanchuyenmay) _Control21 = OpenControl21(chinhsuabophanchuyenmay);
+            if (e.Document.Caption == giahanphieumuon) _Control22 = OpenControl22(giahanphieumuon);
         }
 
 

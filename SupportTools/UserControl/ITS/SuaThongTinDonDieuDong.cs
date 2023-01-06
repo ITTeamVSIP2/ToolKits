@@ -23,7 +23,7 @@ namespace SupportTools
 
         string Sql;
         string SqlLike;
-        string idAfter, orderCodeAfter, desAfter, itemEmployeeIDAfter, employeeCodeAfter, toLineIDAfter, sectionDetailIDAfter, desDetailAfter;
+        string idAfter, orderCodeAfter, desAfter, itemEmployeeIDAfter, toLineIDAfter, sectionDetailIDAfter, desDetailAfter;
         public SuaThongTinDonDieuDong()
         {
             InitializeComponent();
@@ -202,9 +202,7 @@ namespace SupportTools
             {
                 connection.Open();
                 SqlDataAdapter adapter;
-
                 adapter = new SqlDataAdapter(Sql, connection);
-
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 connection.Close();
@@ -292,7 +290,6 @@ namespace SupportTools
                     orderCodeAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "OrderCode"));
                     desAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "Description"));
                     itemEmployeeIDAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "ItemEmployeeID"));
-                    employeeCodeAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "EmployeeCode"));
                     toLineIDAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "ToLineID"));
                     sectionDetailIDAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "SectionDetailID"));
                     desDetailAfter = System.Convert.ToString(dgvIEAbnormalTime.GetRowCellValue(hitInfo.RowHandle, "DescriptionDetail"));

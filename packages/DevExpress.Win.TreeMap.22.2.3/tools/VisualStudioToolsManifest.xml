@@ -1,0 +1,8 @@
+<FileList>
+  <File Reference="DevExpress.XtraTreeMap.v22.2.UI.dll">
+    <ToolboxItems UIFramework="WinForms" VSCategory="DX.22.2: Data &amp; Analytics">
+      <Item Type="DevExpress.XtraTreeMap.SunburstControl" />
+      <Item Type="DevExpress.XtraTreeMap.TreeMapControl" />
+    </ToolboxItems>
+  </File>
+</FileList>

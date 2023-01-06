@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
-using DevExpress.Utils.Menu;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using System.Data.SqlClient;
+using System;
 using System.Configuration;
-using DevExpress.XtraGrid.Columns;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace SupportTools
 {
+
     public partial class SuaDonKyDuyet : DevExpress.XtraEditors.XtraUserControl
     {
         string ID, OrderCode, Status, MainID, MainDetailID, CheckUserID, CheckDate, isFinished, Comment;
@@ -24,6 +19,7 @@ namespace SupportTools
         string sqlUp;
         int a2, b2, c2;
         int flg;
+
         DataTable table = new DataTable();
         public SuaDonKyDuyet()
         {
@@ -36,6 +32,9 @@ namespace SupportTools
             gridView4.OptionsView.ShowGroupPanel = false;
             //gridView4.OptionsView.ShowAutoFilterRow = true;
             LoadLoaiDon();
+
+
+
         }
         DXMenuItem[] menuItems;
         void InitializeMenuItems()
@@ -357,6 +356,12 @@ namespace SupportTools
             e.Handled = true;
         }
 
+
+        private void labelControlLoaiDon_Validated(object sender, EventArgs e)
+        {
+            
+        }
+
         private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
             flag = 1;
@@ -652,6 +657,8 @@ namespace SupportTools
         }
         private void simplebtnKiemTra_1_Click(object sender, EventArgs e)
         {
+            
+            
             MessageBoxx mes = new MessageBoxx();
             if (gridView1.RowCount != 0 || gridView2.RowCount >= 0 || gridView3.RowCount >= 0)
             {
@@ -662,10 +669,9 @@ namespace SupportTools
                 gridControl3.DataSource = null;
                 gridView3.Columns.Clear();
             }
-
             string connString = ConfigurationManager.ConnectionStrings["ITS_Server"].ConnectionString;
             SQL_Control1 query = new SQL_Control1();
-            if (labelControlLoaiDon.Text== "Đơn mua VTTT")
+            if (labelControlLoaiDon.Text == "Đơn mua VTTT")
             {
                 flagtemp = 1;
             }
@@ -716,10 +722,6 @@ namespace SupportTools
             if (labelControlLoaiDon.Text == "Đơn đặt xe")
             {
                 flagtemp = 13;
-            }
-            if (labelControlLoaiDon.Text =="Khu vực bảo vệ")
-            {
-                flagtemp = 14;
             }
 
             try
@@ -805,12 +807,6 @@ namespace SupportTools
                         FROM dbo.ISCarBooking
                         WHERE BookingCode LIKE'" + _a + "%' ORDER BY BookingCode DESC";
                     }
-                    if (flagtemp == 14)
-                    {
-                        sqlUp = @"SELECT TOP 1 OrderCode AS 'CodeA'
-                        FROM dbo.ExportItem
-                        WHERE OrderCode LIKE'" + _a + "%' ORDER BY OrderCode DESC";
-                    }
                     var connection = new SqlConnection(connString);
                     connection.Open();
                     SqlCommand cmd = new SqlCommand(sqlUp, connection);
@@ -835,14 +831,16 @@ namespace SupportTools
                 {
                     if (flagtemp != 7)
                     {
-                        gridControl1.DataSource = null;
-                        gridView1.Columns.Clear();
-                        gridControl2.DataSource = null;
-                        gridView2.Columns.Clear();
-                        gridControl3.DataSource = null;
-                        gridView3.Columns.Clear();
-                        XtraMessageBox.Show("Thông tin bạn nhập không đúng, hoặc không đúng loại đơn.", mes.thongbao, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            gridControl1.DataSource = null;
+                            gridView1.Columns.Clear();
+                            gridControl2.DataSource = null;
+                            gridView2.Columns.Clear();
+                            gridControl3.DataSource = null;
+                            gridView3.Columns.Clear();
+                            XtraMessageBox.Show("Thông tin bạn nhập không đúng, hoặc không đúng loại đơn.", mes.thongbao, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                     }
+                    
                 }
             }
             catch// (Exception ex)
@@ -854,6 +852,7 @@ namespace SupportTools
                 gridControl3.DataSource = null;
                 gridView3.Columns.Clear();
                 XtraMessageBox.Show("Thông tin bạn nhập không đúng, hoặc không đúng loại đơn.", mes.thongbao, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
             int count = gridView1.RowCount;
             if (labelControlLoaiDon.Text == "Đơn công tác" && count > 1)
@@ -864,7 +863,7 @@ namespace SupportTools
             {
                 simplebtnKiemTraChiTiet_1.Enabled = false;
             }
-            if ((labelControlLoaiDon.Text == "Phiếu thanh toán từ ERP" && count > 0) || (labelControlLoaiDon.Text == "Phiếu khác từ ERP" && count > 0)) 
+            if ((labelControlLoaiDon.Text == "Phiếu thanh toán từ ERP" && count > 0) || (labelControlLoaiDon.Text == "Phiếu khác từ ERP" && count > 0))
             {
                 simpleButtonCapNhatERP.Enabled = true;
             }

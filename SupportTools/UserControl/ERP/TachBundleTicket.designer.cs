@@ -41,6 +41,7 @@ namespace SupportTools
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -159,6 +160,10 @@ namespace SupportTools
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // TachBundleTicket
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -196,5 +201,6 @@ namespace SupportTools
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton btnKiemtra;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

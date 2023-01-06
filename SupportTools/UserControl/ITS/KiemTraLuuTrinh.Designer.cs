@@ -57,6 +57,7 @@
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -90,13 +91,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.SetBoundPropertyName(this.groupControl1, "");
             this.groupControl1.Controls.Add(this.tabControl1);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Margin = new System.Windows.Forms.Padding(0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1104, 687);
+            this.groupControl1.Size = new System.Drawing.Size(1104, 691);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
@@ -105,28 +107,31 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.tabControl1, "");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(14, 14);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1075, 660);
+            this.tabControl1.Size = new System.Drawing.Size(1101, 684);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.SetBoundPropertyName(this.tabPage1, "");
             this.tabPage1.Controls.Add(this.groupControl2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1067, 634);
+            this.tabPage1.Size = new System.Drawing.Size(1093, 658);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Lưu trình theo đơn";
             // 
             // groupControl2
             // 
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.SetBoundPropertyName(this.groupControl2, "");
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Controls.Add(this.labelControl1);
@@ -142,7 +147,7 @@
             this.groupControl2.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1061, 628);
+            this.groupControl2.Size = new System.Drawing.Size(1087, 652);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "groupControl2";
             // 
@@ -150,6 +155,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
+            this.SetBoundPropertyName(this.labelControl4, "");
             this.labelControl4.Location = new System.Drawing.Point(685, 44);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(54, 16);
@@ -160,6 +166,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
+            this.SetBoundPropertyName(this.labelControl3, "");
             this.labelControl3.Location = new System.Drawing.Point(5, 44);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(119, 16);
@@ -170,6 +177,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
+            this.SetBoundPropertyName(this.labelControl1, "");
             this.labelControl1.Location = new System.Drawing.Point(2, 303);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(114, 16);
@@ -178,6 +186,7 @@
             // 
             // gridControl1
             // 
+            this.SetBoundPropertyName(this.gridControl1, "");
             this.gridControl1.Location = new System.Drawing.Point(3, 66);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -210,6 +219,7 @@
             // 
             // labelControl
             // 
+            this.SetBoundPropertyName(this.labelControl, "");
             this.labelControl.Location = new System.Drawing.Point(375, 20);
             this.labelControl.Name = "labelControl";
             this.labelControl.Size = new System.Drawing.Size(0, 13);
@@ -220,10 +230,11 @@
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.gridControl2, "");
             this.gridControl2.Location = new System.Drawing.Point(685, 66);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(373, 553);
+            this.gridControl2.Size = new System.Drawing.Size(399, 577);
             this.gridControl2.TabIndex = 36;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2,
@@ -237,6 +248,7 @@
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.gridView2.OptionsView.ShowFooter = true;
             this.gridView2.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView2_CustomDrawFooter);
+            this.gridView2.Click += new System.EventHandler(this.gridView2_Click);
             // 
             // gridView6
             // 
@@ -245,14 +257,17 @@
             // 
             // simplebtnKiemTra
             // 
+            this.SetBoundPropertyName(this.simplebtnKiemTra, "");
             this.simplebtnKiemTra.Location = new System.Drawing.Point(251, 6);
             this.simplebtnKiemTra.Name = "simplebtnKiemTra";
             this.simplebtnKiemTra.Size = new System.Drawing.Size(100, 40);
             this.simplebtnKiemTra.TabIndex = 39;
             this.simplebtnKiemTra.Text = "Kiểm tra";
+            this.simplebtnKiemTra.Click += new System.EventHandler(this.simplebtnKiemTra_Click);
             // 
             // txtMaDon
             // 
+            this.SetBoundPropertyName(this.txtMaDon, "");
             this.txtMaDon.EditValue = "";
             this.txtMaDon.Location = new System.Drawing.Point(50, 16);
             this.txtMaDon.Name = "txtMaDon";
@@ -263,10 +278,11 @@
             // 
             this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.SetBoundPropertyName(this.gridControl3, "");
             this.gridControl3.Location = new System.Drawing.Point(2, 325);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(672, 294);
+            this.gridControl3.Size = new System.Drawing.Size(672, 318);
             this.gridControl3.TabIndex = 38;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -281,6 +297,7 @@
             // 
             // labelControl2
             // 
+            this.SetBoundPropertyName(this.labelControl2, "");
             this.labelControl2.Location = new System.Drawing.Point(5, 19);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(39, 13);
@@ -290,11 +307,12 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.SetBoundPropertyName(this.tabPage2, "");
             this.tabPage2.Controls.Add(this.groupControl3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1067, 634);
+            this.tabPage2.Size = new System.Drawing.Size(1093, 658);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lưu trình chung";
             // 
@@ -304,6 +322,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.SetBoundPropertyName(this.groupControl3, "");
             this.groupControl3.Controls.Add(this.gridControl5);
             this.groupControl3.Controls.Add(this.txtBien);
             this.groupControl3.Controls.Add(this.labelControl6);
@@ -313,7 +332,7 @@
             this.groupControl3.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1056, 621);
+            this.groupControl3.Size = new System.Drawing.Size(1082, 655);
             this.groupControl3.TabIndex = 36;
             this.groupControl3.Text = "groupControl3";
             // 
@@ -322,10 +341,11 @@
             this.gridControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl5.Location = new System.Drawing.Point(387, 41);
+            this.SetBoundPropertyName(this.gridControl5, "");
+            this.gridControl5.Location = new System.Drawing.Point(387, 52);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
-            this.gridControl5.Size = new System.Drawing.Size(663, 560);
+            this.gridControl5.Size = new System.Drawing.Size(689, 600);
             this.gridControl5.TabIndex = 5;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -337,20 +357,26 @@
             this.gridView5.OptionsSelection.MultiSelect = true;
             this.gridView5.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ShowFooter = true;
+            this.gridView5.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView5_CustomDrawFooter);
             // 
             // txtBien
             // 
+            this.txtBien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SetBoundPropertyName(this.txtBien, "");
             this.txtBien.EditValue = "";
-            this.txtBien.Location = new System.Drawing.Point(-18, 620);
+            this.txtBien.Location = new System.Drawing.Point(386, 26);
             this.txtBien.Name = "txtBien";
-            this.txtBien.Size = new System.Drawing.Size(1131, 20);
+            this.txtBien.Size = new System.Drawing.Size(690, 20);
             this.txtBien.TabIndex = 6;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(387, 19);
+            this.SetBoundPropertyName(this.labelControl6, "");
+            this.labelControl6.Location = new System.Drawing.Point(387, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(119, 16);
             this.labelControl6.TabIndex = 35;
@@ -360,10 +386,11 @@
             // 
             this.gridControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gridControl4.Location = new System.Drawing.Point(5, 41);
+            this.SetBoundPropertyName(this.gridControl4, "");
+            this.gridControl4.Location = new System.Drawing.Point(5, 26);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(375, 560);
+            this.gridControl4.Size = new System.Drawing.Size(375, 626);
             this.gridControl4.TabIndex = 4;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -374,22 +401,29 @@
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsSelection.MultiSelect = true;
             this.gridView4.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gridView4.OptionsView.ShowFooter = true;
+            this.gridView4.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView4_CustomDrawFooter);
+            this.gridView4.Click += new System.EventHandler(this.gridView4_Click);
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(5, 19);
+            this.SetBoundPropertyName(this.labelControl5, "");
+            this.labelControl5.Location = new System.Drawing.Point(5, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(54, 16);
             this.labelControl5.TabIndex = 34;
             this.labelControl5.Text = "Loại đơn";
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // KiemTraLuuTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupControl1);
             this.Name = "KiemTraLuuTrinh";
             this.Size = new System.Drawing.Size(1107, 690);
@@ -455,5 +489,6 @@
         private DevExpress.XtraGrid.GridControl gridControl4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -19,11 +19,12 @@ namespace SupportTools
         private string connString = "Server=10.17.215.212;Database=ITS;Connection Timeout=60;User Id=FEAWUser; PWD=!FEAWUser89";
         public KhuVucBaoVe()
         {
+            
             InitializeComponent();
-            //loadComboboxUnit();
-            //loadComboboxItem();
-            //loadComboboxbophan_keydown();
-            //loadComboboxUser_keydown();
+            loadComboboxUnit();
+            loadComboboxItem();
+            loadComboboxbophan_keydown();
+            loadComboboxUser_keydown();
             gridView1.OptionsView.ShowGroupPanel = false;
             loaddanhsachdacaidat();
             DesignGV1();

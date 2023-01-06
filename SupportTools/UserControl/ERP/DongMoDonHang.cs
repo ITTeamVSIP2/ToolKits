@@ -16,7 +16,7 @@ using System.Reflection;
 
 namespace SupportTools
 {
-    public partial class DongMoDonHang : UserControl
+    public partial class DongMoDonHang : XtraUserControl
     {
         string _fepo;
         string msnv = "";
@@ -296,6 +296,7 @@ namespace SupportTools
 
         private void sBtnTruyVan_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             if (txtDR.Text != "")
             {
                 string connString = ConfigurationManager.ConnectionStrings["ITS_Server"].ConnectionString;
@@ -315,6 +316,7 @@ namespace SupportTools
                     connection.Close();
                     gctrlDR.DataSource = dt;
                     sBtnHoanThanh.Enabled = true;
+                    splashScreenManager1.CloseWaitForm();
 
                 }
                 catch //(Exception ex)
@@ -371,6 +373,7 @@ namespace SupportTools
 
         private void sBtnTruyVanFEPO_Click(object sender, EventArgs e)
         {
+     
             if (memoFEPO.Text != "")
             {
                 string _FEPO;
@@ -383,10 +386,12 @@ namespace SupportTools
                     simplebtnMRDong.Enabled = true;
                     simplebtnPLMo.Enabled = true;
                     simplebtnPLDong.Enabled = true;
+                    
                 }
                             }
             else
-            { XtraMessageBox.Show("Vui lòng nhập FEPO.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            { XtraMessageBox.Show("Vui lòng nhập FEPO.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);  }
+
         }
 
         private void sBtnChoPhepFEPO_Click(object sender, EventArgs e)

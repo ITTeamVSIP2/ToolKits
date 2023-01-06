@@ -1,0 +1,7 @@
+<FileList>
+  <File Reference="DevExpress.XtraMap.v22.2.dll">
+    <ToolboxItems UIFramework="WinForms" VSCategory="DX.22.2: Data &amp; Analytics">
+      <Item Type="DevExpress.XtraMap.MapControl" />
+    </ToolboxItems>
+  </File>
+</FileList>

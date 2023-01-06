@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DevExpress.XtraEditors;
 
 namespace SupportTools
 {
-    public partial class CapNhatMaVatTu : UserControl
+    public partial class CapNhatMaVatTu : XtraUserControl
     {
         private string connString = "Server=10.17.215.212;Database=ITS;Connection Timeout=60;User Id=FEAWUser; PWD=!FEAWUser89";
-        
+
+
         public CapNhatMaVatTu()
         {
             InitializeComponent();

@@ -34,11 +34,11 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.cbItem = new System.Windows.Forms.ComboBox();
             this.simplebtnCapNhat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.rtbItemDetail = new DevExpress.XtraEditors.MemoEdit();
-            this.cbItem = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -101,8 +101,19 @@
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "groupControl3";
             // 
+            // cbItem
+            // 
+            this.cbItem.FormattingEnabled = true;
+            this.cbItem.Location = new System.Drawing.Point(249, 23);
+            this.cbItem.Name = "cbItem";
+            this.cbItem.Size = new System.Drawing.Size(266, 21);
+            this.cbItem.TabIndex = 72;
+            // 
             // simplebtnCapNhat
             // 
+            this.simplebtnCapNhat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simplebtnCapNhat.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.convertto;
+            this.simplebtnCapNhat.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.simplebtnCapNhat.Location = new System.Drawing.Point(249, 50);
             this.simplebtnCapNhat.Name = "simplebtnCapNhat";
             this.simplebtnCapNhat.Size = new System.Drawing.Size(100, 40);
@@ -133,19 +144,10 @@
             this.rtbItemDetail.Size = new System.Drawing.Size(240, 382);
             this.rtbItemDetail.TabIndex = 73;
             // 
-            // cbItem
-            // 
-            this.cbItem.FormattingEnabled = true;
-            this.cbItem.Location = new System.Drawing.Point(249, 23);
-            this.cbItem.Name = "cbItem";
-            this.cbItem.Size = new System.Drawing.Size(266, 21);
-            this.cbItem.TabIndex = 72;
-            // 
             // CapNhatMaVatTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupControl2);
             this.Name = "CapNhatMaVatTu";
             this.Size = new System.Drawing.Size(546, 427);

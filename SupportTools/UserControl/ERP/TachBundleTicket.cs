@@ -23,6 +23,7 @@ namespace SupportTools
         }
         private void btnKiemtra_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["ERP_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string Sql = "SELECT CuttingOrderID, OrderCode, OrderDate, DealPerson, Status FROM.dbo.[CuttingOrder]" + " "
@@ -41,6 +42,7 @@ namespace SupportTools
                 gridView1.Columns["OrderCode"].Width = 150;
                 gridView1.Columns["OrderDate"].Width = 80;
                 gridView1.Columns["DealPerson"].Width = 80;
+                splashScreenManager1.CloseWaitForm();
             }
             catch// (Exception ex)
             {

@@ -22,6 +22,7 @@ namespace SupportTools
 
         private void simpleButtonKiemTra_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WTS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string connStringERP = ConfigurationManager.ConnectionStrings["ERP_Server"].ConnectionString;
@@ -109,6 +110,7 @@ namespace SupportTools
                     }
                     
                 }
+                splashScreenManager1.CloseWaitForm();
             }
             catch
             {
@@ -118,6 +120,7 @@ namespace SupportTools
 
         private void simpleButtonXuatExcel_Click(object sender, EventArgs e)
         {
+            
             string filePath = "";
             // tạo SaveFileDialog để lưu file excel
             SaveFileDialog dialog = new SaveFileDialog();

@@ -64,6 +64,7 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sBtnHoanThanh = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,6 +86,8 @@
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl2.Controls.Add(this.groupBox1);
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
@@ -100,6 +103,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.groupControl3);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
@@ -113,6 +117,8 @@
             this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl3.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl3.Controls.Add(this.groupControl1);
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
@@ -293,6 +299,7 @@
             this.gridViewListFEPO.OptionsView.ShowFooter = true;
             this.gridViewListFEPO.OptionsView.ShowGroupPanel = false;
             this.gridViewListFEPO.CustomDrawFooter += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridViewListFEPO_CustomDrawFooter);
+            this.gridViewListFEPO.DoubleClick += new System.EventHandler(this.gridViewListFEPO_DoubleClick);
             // 
             // gridColumn12
             // 
@@ -460,12 +467,19 @@
             this.sBtnHoanThanh.Text = "Hoàn thành";
             this.sBtnHoanThanh.Click += new System.EventHandler(this.sBtnHoanThanh_Click);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // DongMoDonHang
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupControl2);
+            this.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "DongMoDonHang";
             this.Size = new System.Drawing.Size(1054, 697);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -524,5 +538,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.SimpleButton sBtnHoanThanh;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

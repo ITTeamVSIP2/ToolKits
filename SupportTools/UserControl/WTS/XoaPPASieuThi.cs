@@ -27,6 +27,7 @@ namespace SupportTools
 
         private void simpleButtonKiemTraInput_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             if (gridControl1.DataSource != null)
             {
                 ColumnsCount = gridView1.Columns.Count;
@@ -77,15 +78,18 @@ namespace SupportTools
                 {
                     simpleButtonXoaPPA.Enabled = true;
                 }
+                splashScreenManager1.CloseWaitForm();
             }
             catch// (Exception ex)
             {
-
+                splashScreenManager1.CloseWaitForm();
+                splashScreenManager1.Dispose();
             }
         }
 
         private void simpleButtonKiemTraPPA_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             if (gridControl1.DataSource != null)
             {
                 ColumnsCount = gridView1.Columns.Count;
@@ -122,10 +126,12 @@ namespace SupportTools
                 gridView1.Columns["dOutputDate"].DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
                 gridView1.Columns["tCreateTime"].DisplayFormat.FormatString = "yyyy-MM-dd HH:mm:ss.fff";
                 gridControl1.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
             }
             catch //(Exception ex)
             {
-
+                splashScreenManager1.CloseWaitForm();
+                splashScreenManager1.Dispose();
             }
         }
 
@@ -181,6 +187,7 @@ namespace SupportTools
 
         private void simpleButtonXoaPPA_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             if (XtraMessageBox.Show("Bạn có muốn xóa dữ liệu?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.No)
             {
                 string connString = ConfigurationManager.ConnectionStrings["WTS_Server"].ConnectionString;
@@ -197,11 +204,13 @@ namespace SupportTools
                     SqlCommand commandPrefix = new SqlCommand(Sql, connection);
                     commandPrefix.ExecuteNonQuery();
                     connection.Close();
+                    splashScreenManager1.CloseWaitForm();
                     XtraMessageBox.Show("Đã xóa dữ liệu PPA.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch //(Exception ex)
                 {
-
+                    splashScreenManager1.CloseWaitForm();
+                    splashScreenManager1.Dispose();
                 }
             }
         }

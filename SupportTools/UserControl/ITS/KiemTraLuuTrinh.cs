@@ -15,12 +15,14 @@ using DevExpress.XtraGrid.Columns;
 
 namespace SupportTools
 {
-    public partial class KiemTraLuuTrinh : UserControl
+    public partial class KiemTraLuuTrinh : EditFormUserControl
     {
         string ApproverID, NodeID, Sequence, CheckUserID, CheckUserName, DocumentTypeID, DocumentTypeName;
         int i;
 
         DataTable table = new DataTable();
+
+
         public KiemTraLuuTrinh()
         {
             InitializeComponent();
@@ -140,6 +142,30 @@ namespace SupportTools
             e.Handled = true;
         }
 
+        private void gridView4_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView4.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
+        private void gridView5_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Near;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            var rect = e.Bounds;
+            rect.X += 10;
+            e.DefaultDraw();
+            e.Cache.DrawString(gridView5.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
+            e.Handled = true;
+        }
+
         public void LoadWorkFlow()
         {
             SQL_Control2 query = new SQL_Control2();
@@ -156,6 +182,7 @@ namespace SupportTools
         }
         private void simplebtnKiemTra_Click(object sender, EventArgs e)
         {
+            
             LoadWFMain();
             for (int k2 = 0; k2 <= 12; k2++)
             {
@@ -170,6 +197,7 @@ namespace SupportTools
             var connection = new SqlConnection(connString);
             try
             {
+                splashScreenManager1.ShowWaitForm();
                 connection.Open();
                 for (i = 0; i <= 12; i++)
                 {
@@ -205,8 +233,10 @@ namespace SupportTools
                     gridView1.SetRowCellValue(i, "CheckUserName", CheckUserName);
                     gridView1.SetRowCellValue(i, "DocumentTypeID", DocumentTypeID);
                     sqlReader.Close();
+                    
                 }
                 connection.Close();
+                splashScreenManager1.CloseWaitForm();
             }
             catch //(Exception ex)
             {

@@ -41,6 +41,7 @@
             this.simpleButtonKiemTraInput = new DevExpress.XtraEditors.SimpleButton();
             this.memoBarcode = new DevExpress.XtraEditors.MemoEdit();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -124,11 +125,14 @@
             // 
             // simpleButtonXuatExcel
             // 
+            this.simpleButtonXuatExcel.ImageOptions.Image = global::SupportTools.Properties.Resources.exporttoxls_16x16;
+            this.simpleButtonXuatExcel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.simpleButtonXuatExcel.Location = new System.Drawing.Point(438, 7);
             this.simpleButtonXuatExcel.Name = "simpleButtonXuatExcel";
             this.simpleButtonXuatExcel.Size = new System.Drawing.Size(100, 40);
             this.simpleButtonXuatExcel.TabIndex = 78;
             this.simpleButtonXuatExcel.Text = "Xuất excel";
+            this.simpleButtonXuatExcel.Click += new System.EventHandler(this.simpleButtonXuatExcel_Click);
             // 
             // simpleButtonXoaPPA
             // 
@@ -138,6 +142,7 @@
             this.simpleButtonXoaPPA.Size = new System.Drawing.Size(100, 40);
             this.simpleButtonXoaPPA.TabIndex = 77;
             this.simpleButtonXoaPPA.Text = "Xóa PPA";
+            this.simpleButtonXoaPPA.Click += new System.EventHandler(this.simpleButtonXoaPPA_Click);
             // 
             // simpleButtonKiemTraPPA
             // 
@@ -146,6 +151,7 @@
             this.simpleButtonKiemTraPPA.Size = new System.Drawing.Size(120, 40);
             this.simpleButtonKiemTraPPA.TabIndex = 76;
             this.simpleButtonKiemTraPPA.Text = "Kiểm tra PPA";
+            this.simpleButtonKiemTraPPA.Click += new System.EventHandler(this.simpleButtonKiemTraPPA_Click);
             // 
             // simpleButtonKiemTraInput
             // 
@@ -154,6 +160,7 @@
             this.simpleButtonKiemTraInput.Size = new System.Drawing.Size(120, 40);
             this.simpleButtonKiemTraInput.TabIndex = 75;
             this.simpleButtonKiemTraInput.Text = "Kiểm tra input";
+            this.simpleButtonKiemTraInput.Click += new System.EventHandler(this.simpleButtonKiemTraInput_Click);
             // 
             // memoBarcode
             // 
@@ -168,6 +175,10 @@
             // imageCollection1
             // 
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // XoaPPASieuThi
             // 
@@ -206,5 +217,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonKiemTraInput;
         private DevExpress.XtraEditors.MemoEdit memoBarcode;
         private DevExpress.Utils.ImageCollection imageCollection1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

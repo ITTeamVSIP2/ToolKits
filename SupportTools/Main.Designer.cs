@@ -41,6 +41,7 @@
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement28 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -49,6 +50,7 @@
             this.accordionControlElement26 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement27 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement25 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -66,16 +68,12 @@
             this.accordionControlElement19 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement21 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement23 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager
@@ -168,6 +166,7 @@
             this.accordionControlElement2,
             this.accordionControlElement1,
             this.accordionControlElement6,
+            this.accordionControlElement28,
             this.accordionControlElement8,
             this.accordionControlElement4,
             this.accordionControlElement9,
@@ -175,8 +174,6 @@
             this.accordionControlElement12.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement12.Name = "accordionControlElement12";
             this.accordionControlElement12.Text = "ITS";
-
-
             // 
             // employeesAccordionControlElement
             // 
@@ -194,7 +191,7 @@
             // 
             // accordionControlElement2
             // 
-           this.accordionControlElement2.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.actions_remove;
+            this.accordionControlElement2.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.actions_remove;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement2.Text = "Cập nhật QC MPQ";
@@ -212,6 +209,13 @@
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement6.Text = "Khu vực bảo vệ";
+            // 
+            // accordionControlElement28
+            // 
+            this.accordionControlElement28.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.actions_remove;
+            this.accordionControlElement28.Name = "accordionControlElement28";
+            this.accordionControlElement28.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement28.Text = "Gia hạn phiếu mượn";
             // 
             // accordionControlElement8
             // 
@@ -246,7 +250,8 @@
             this.accordionControlElement11.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement26,
             this.accordionControlElement7,
-            this.accordionControlElement10});
+            this.accordionControlElement10,
+            this.accordionControlElement27});
             this.accordionControlElement11.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement11.Name = "accordionControlElement11";
             this.accordionControlElement11.Text = "WTS";
@@ -272,13 +277,19 @@
             this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement10.Text = "Xóa input chuyền may";
             // 
+            // accordionControlElement27
+            // 
+            this.accordionControlElement27.ImageOptions.SvgImage = global::SupportTools.Properties.Resources.actions_remove;
+            this.accordionControlElement27.Name = "accordionControlElement27";
+            this.accordionControlElement27.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement27.Text = "Chỉnh sửa bộ phận chuyền may";
+            // 
             // accordionControlElement13
             // 
             this.accordionControlElement13.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement3,
             this.accordionControlElement25,
             this.accordionControlElement22});
-            this.accordionControlElement13.Expanded = true;
             this.accordionControlElement13.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement13.Name = "accordionControlElement13";
             this.accordionControlElement13.Text = "ERP";
@@ -311,7 +322,6 @@
             this.accordionControlElement16,
             this.accordionControlElement17,
             this.accordionControlElement18});
-            this.accordionControlElement14.Expanded = true;
             this.accordionControlElement14.ImageOptions.Image = global::SupportTools.Properties.Resources.apply_16x16;
             this.accordionControlElement14.Name = "accordionControlElement14";
             this.accordionControlElement14.Text = "WMS";
@@ -395,27 +405,6 @@
             this.accordionControlElement23.Name = "accordionControlElement23";
             this.accordionControlElement23.Text = "Element20";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::SupportTools.Properties.Resources._5;
-            this.pictureBox1.Location = new System.Drawing.Point(373, 111);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(893, 510);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.AutoSize = true;
-            this.panelControl1.ContentImage = global::SupportTools.Properties.Resources._5;
-            this.panelControl1.Location = new System.Drawing.Point(400, 149);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(695, 410);
-            this.panelControl1.TabIndex = 4;
-            // 
             // Main
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -427,8 +416,6 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Center;
             this.BackgroundImageStore = global::SupportTools.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1444, 731);
-            this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dockPanel1);
             this.DoubleBuffered = true;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Main.IconOptions.Icon")));
@@ -448,17 +435,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private DevExpress.XtraBars.Docking.DockManager dockManager;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mainAccordionGroup;
@@ -488,13 +471,14 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement19;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement21;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement23;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement20;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement22;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement24;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement26;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement25;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement27;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement28;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
     }
 }
 

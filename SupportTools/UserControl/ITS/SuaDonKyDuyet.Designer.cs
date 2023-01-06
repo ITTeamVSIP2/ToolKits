@@ -62,6 +62,8 @@
             this.simplebtnKiemTra_1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtMaDon = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -82,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -178,6 +181,7 @@
             // 
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.Name = "gridView4";
+            this.gridView4.NewItemRowText = "in";
             this.gridView4.OptionsBehavior.ReadOnly = true;
             this.gridView4.OptionsSelection.MultiSelect = true;
             this.gridView4.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
@@ -256,10 +260,11 @@
             // 
             // labelControlLoaiDon
             // 
-            this.labelControlLoaiDon.Location = new System.Drawing.Point(598, 33);
+            this.labelControlLoaiDon.Location = new System.Drawing.Point(954, 71);
             this.labelControlLoaiDon.Name = "labelControlLoaiDon";
             this.labelControlLoaiDon.Size = new System.Drawing.Size(0, 13);
             this.labelControlLoaiDon.TabIndex = 258;
+            this.labelControlLoaiDon.Validated += new System.EventHandler(this.labelControlLoaiDon_Validated);
             // 
             // gridControl1
             // 
@@ -313,7 +318,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(930, 33);
+            this.labelControl6.Location = new System.Drawing.Point(978, 43);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(33, 13);
             this.labelControl6.TabIndex = 250;
@@ -321,7 +326,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(683, 33);
+            this.labelControl5.Location = new System.Drawing.Point(731, 43);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(58, 13);
             this.labelControl5.TabIndex = 249;
@@ -329,7 +334,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(892, 33);
+            this.labelControl4.Location = new System.Drawing.Point(940, 43);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(32, 13);
             this.labelControl4.TabIndex = 248;
@@ -338,7 +343,7 @@
             // txtMSNV
             // 
             this.txtMSNV.EditValue = "";
-            this.txtMSNV.Location = new System.Drawing.Point(747, 29);
+            this.txtMSNV.Location = new System.Drawing.Point(795, 39);
             this.txtMSNV.Name = "txtMSNV";
             this.txtMSNV.Size = new System.Drawing.Size(139, 20);
             this.txtMSNV.TabIndex = 247;
@@ -347,7 +352,7 @@
             // txtIDNV
             // 
             this.txtIDNV.EditValue = "";
-            this.txtIDNV.Location = new System.Drawing.Point(969, 29);
+            this.txtIDNV.Location = new System.Drawing.Point(1017, 39);
             this.txtIDNV.Name = "txtIDNV";
             this.txtIDNV.Size = new System.Drawing.Size(118, 20);
             this.txtIDNV.TabIndex = 246;
@@ -419,12 +424,23 @@
             this.textEdit3.Size = new System.Drawing.Size(112, 20);
             this.textEdit3.TabIndex = 195;
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // SuaDonKyDuyet
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Underline);
             this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.groupControl2);
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -452,6 +468,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -490,5 +507,7 @@
         private DevExpress.XtraEditors.SimpleButton simplebtnKiemTra_1;
         private DevExpress.XtraEditors.TextEdit txtMaDon;
         private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

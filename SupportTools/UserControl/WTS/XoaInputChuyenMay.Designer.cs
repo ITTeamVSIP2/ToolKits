@@ -47,6 +47,7 @@
             this.simpleButtonXoa = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButtonKiemTra = new DevExpress.XtraEditors.SimpleButton();
             this.memoBarcode = new DevExpress.XtraEditors.MemoEdit();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::SupportTools.UserControl.WMS.WaitForm), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.gridViewdulieuBTPERP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControldulieuBTPERP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewdulieuInputERP)).BeginInit();
@@ -221,6 +222,8 @@
             // 
             // simpleButtonXuatExcel
             // 
+            this.simpleButtonXuatExcel.ImageOptions.Image = global::SupportTools.Properties.Resources.exporttoxls_16x16;
+            this.simpleButtonXuatExcel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.simpleButtonXuatExcel.Location = new System.Drawing.Point(296, 12);
             this.simpleButtonXuatExcel.Name = "simpleButtonXuatExcel";
             this.simpleButtonXuatExcel.Size = new System.Drawing.Size(100, 40);
@@ -255,6 +258,10 @@
             this.memoBarcode.Name = "memoBarcode";
             this.memoBarcode.Size = new System.Drawing.Size(169, 778);
             this.memoBarcode.TabIndex = 76;
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // XoaInputChuyenMay
             // 
@@ -307,5 +314,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButtonXoa;
         private DevExpress.XtraEditors.SimpleButton simpleButtonKiemTra;
         private DevExpress.XtraEditors.MemoEdit memoBarcode;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

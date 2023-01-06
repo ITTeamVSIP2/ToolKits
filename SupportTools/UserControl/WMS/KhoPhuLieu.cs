@@ -25,6 +25,7 @@ namespace SupportTools
         }
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string connStringERP = ConfigurationManager.ConnectionStrings["ERP_Server"].ConnectionString;
@@ -48,6 +49,7 @@ namespace SupportTools
                             WHERE msuo.OrderCode = '" + txtOrderCode.Text + "'";
             try
             {
+               
                 connection.Open();
                 connectionERP.Open();
                 //WMS
@@ -71,16 +73,19 @@ namespace SupportTools
                 gridControlDataWMS.DataSource = dtWMS;
                 gridControlDataStaging.DataSource = dtStaging;
                 gridControlDataERP.DataSource = dtERP;
+                splashScreenManager1.CloseWaitForm();
 
             }
             catch (Exception ex)
             {
                 txtOrderCode.Text = ex.Message;
+                splashScreenManager1.Dispose();
             }
         }
 
         private void btnCheck2_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             string connStringERP = ConfigurationManager.ConnectionStrings["ERP_Server"].ConnectionString;
@@ -212,16 +217,19 @@ namespace SupportTools
                 gridControlDataWMS2.DataSource = dtWMS;
                 gridControlDataStaging2.DataSource = dtStaging;
                 gridControlDataERP2.DataSource = dtERP;
+                splashScreenManager1.CloseWaitForm();
 
             }
             catch (Exception ex)
             {
                 txtOrderCode.Text = ex.Message;
+                splashScreenManager1.Dispose();
             }
         }
 
         private void btnSync2_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             int day = Convert.ToInt32(txtDaySync2.Text);
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
@@ -234,10 +242,12 @@ namespace SupportTools
                 command.CommandTimeout = 0;
                 command.ExecuteNonQuery();
                 XtraMessageBox.Show("Đồng bộ thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
                 txtOrderCode.Text = ex.Message;
+                splashScreenManager1.Dispose();
             }
         }
 
@@ -259,44 +269,11 @@ namespace SupportTools
             }
         }
         
-        private void gridViewDataERP_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
-        {
-            StringFormat stringFormat = new StringFormat();
-            stringFormat.Alignment = StringAlignment.Near;
-            stringFormat.LineAlignment = StringAlignment.Center;
-            var rect = e.Bounds;
-            rect.X += 10;
-            e.DefaultDraw();
-            e.Cache.DrawString(gridViewDataERP.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
-            e.Handled = true;
-        }
+   
 
-        private void gridViewDataStaging_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        private void btnUpdateCHECKED_Click(object sender, EventArgs e)
         {
-            StringFormat stringFormat = new StringFormat();
-            stringFormat.Alignment = StringAlignment.Near;
-            stringFormat.LineAlignment = StringAlignment.Center;
-            var rect = e.Bounds;
-            rect.X += 10;
-            e.DefaultDraw();
-            e.Cache.DrawString(gridViewDataStaging.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
-            e.Handled = true;
-        }
-
-        private void gridViewDataWMS_CustomDrawFooter(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
-        {
-            StringFormat stringFormat = new StringFormat();
-            stringFormat.Alignment = StringAlignment.Near;
-            stringFormat.LineAlignment = StringAlignment.Center;
-            var rect = e.Bounds;
-            rect.X += 10;
-            e.DefaultDraw();
-            e.Cache.DrawString(gridViewDataWMS.RowCount + " rows", e.Appearance.GetFont(), e.Appearance.GetForeBrush(e.Cache), rect, stringFormat);
-            e.Handled = true;
-        }
-
-        private void btnUpdate1_Click(object sender, EventArgs e)
-        {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             connection.Open();
@@ -310,15 +287,19 @@ namespace SupportTools
                 commandPrefix.ExecuteNonQuery();
                 connection.Close();
                 XtraMessageBox.Show("Cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
                 txtOrderCode.Text = ex.Message;
+                splashScreenManager1.Dispose();
             }
         }
 
+
         private void btnSync_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             int day = Convert.ToInt32(txtDaySync.Text);
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
@@ -331,9 +312,11 @@ namespace SupportTools
                 command.CommandTimeout = 0;
                 command.ExecuteNonQuery();
                 XtraMessageBox.Show("Đồng bộ thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
+                splashScreenManager1.Dispose();
                 txtOrderCode.Text = ex.Message;
             }
         }

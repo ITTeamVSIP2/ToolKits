@@ -23,6 +23,7 @@ namespace SupportTools
         }
         private void btnCheckCardID2_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["WMS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             sqlStaging = memoSQL.Text + "'" + txtCardID2.Text + "'" + " OR fcl.sRefBarCode = '" + txtCardID2.Text + "'";
@@ -34,6 +35,7 @@ namespace SupportTools
                 adapter.Fill(dt);
                 connection.Close();
                 gridControlDataStaging.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
@@ -68,6 +70,7 @@ namespace SupportTools
 
         private void btnCheckCardID1_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             string connString = ConfigurationManager.ConnectionStrings["GP_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             sqlGongPion = memoSQLDataGongPion.Text + "'" + txtCardID1.Text + "'" + " OR fcl.sRefBarCode = '" + txtCardID1.Text + "'";
@@ -79,9 +82,11 @@ namespace SupportTools
                 adapter.Fill(dt);
                 connection.Close();
                 gridControlDataGongPion.DataSource = dt;
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
+                splashScreenManager1.Dispose();
                 XtraMessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

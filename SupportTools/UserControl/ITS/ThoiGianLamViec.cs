@@ -25,8 +25,13 @@ namespace SupportTools
 
         private void simpleButtonTra_Click(object sender, EventArgs e)
         {
+
             if (dateEditDate.Text == "")
-            { XtraMessageBox.Show("Vui lòng chọn ngày.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            {
+                
+                XtraMessageBox.Show("Vui lòng chọn ngày.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
             else
             {
                 AttDate = dateEditDate.Text;
@@ -54,7 +59,7 @@ namespace SupportTools
                     gridView1.Columns["EmployeeCode"].Width = 80;
                     gridView1.Columns["EmployeeName"].Width = 170;
                     gridView1.Columns["Status"].Width = 80;
-
+                   
 
                 }
                 catch// (Exception ex)
@@ -112,10 +117,12 @@ namespace SupportTools
                     }
                 }
             }
+
         }
 
         private void simpleButtonDongbo_Click(object sender, EventArgs e)
         {
+
             string connString = ConfigurationManager.ConnectionStrings["ITS_Server"].ConnectionString;
             var connection = new SqlConnection(connString);
             try
@@ -129,6 +136,7 @@ namespace SupportTools
                 command.ExecuteNonQuery();
                 connection.Close();
                 XtraMessageBox.Show("Đồng bộ thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {
